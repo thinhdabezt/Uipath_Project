@@ -1,0 +1,13 @@
+﻿{
+  "Name": "[Use ApplicationChrome]",
+  "Type": "Screen",
+  "Id": "j2pTZCkg80-xGzvvyjxOAw",
+  "Reference": "TYTQir3MGke_vtMwezkgIQ/j2pTZCkg80-xGzvvyjxOAw",
+  "ParentRef": "TYTQir3MGke_vtMwezkgIQ/WZJEgxL_f0CMNZMSRglMjw",
+  "Created": "2025-03-08T07:11:06.894007Z",
+  "Updated": "2025-03-08T07:11:06.894007Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

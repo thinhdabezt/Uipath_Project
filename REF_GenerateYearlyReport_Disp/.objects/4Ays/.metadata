@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome New Tab",
+  "Type": "App",
+  "Id": "4Ays8R4Od0-mnscdmnvqQQ",
+  "Reference": "TYTQir3MGke_vtMwezkgIQ/4Ays8R4Od0-mnscdmnvqQQ",
+  "Created": "2025-03-07T07:39:10.3321863Z",
+  "Updated": "2025-03-07T07:39:10.3321863Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

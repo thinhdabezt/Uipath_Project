@@ -1,0 +1,14 @@
+﻿{
+  "Name": "[ClickNext Page]",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "tottml-_1E2sPVPGVIXqfA",
+  "Reference": "TYTQir3MGke_vtMwezkgIQ/tottml-_1E2sPVPGVIXqfA",
+  "ParentRef": "TYTQir3MGke_vtMwezkgIQ/j2pTZCkg80-xGzvvyjxOAw",
+  "Created": "2025-03-08T07:11:20.9960524Z",
+  "Updated": "2025-03-08T07:11:20.9960524Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
