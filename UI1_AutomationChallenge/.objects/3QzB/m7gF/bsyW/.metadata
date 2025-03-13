@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome The Automation Challenge",
+  "Type": "Screen",
+  "Id": "bsyWBWLFdUOJcG-3STjwog",
+  "Reference": "enc63wlTHEipS7Zy5V0XBA/bsyWBWLFdUOJcG-3STjwog",
+  "ParentRef": "enc63wlTHEipS7Zy5V0XBA/m7gFqMMWhEWwobsChyB3tQ",
+  "Created": "2025-03-11T05:50:55.2026304Z",
+  "Updated": "2025-03-11T05:50:55.2026304Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="5Tq2OqHCo0aPkjJJkHlHTA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="theautomationchallenge.com" CVScreenId="36f16cd9-c9fe-4de4-bf68-5e0371885386" CvElementArea="913, 372, 221, 55" CvType="InputBox" DesignTimeRectangle="916, 375, 216, 51" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='input' class='bubble-element Input a1741681936559x3357' aaname='' /&gt;" Guid="d215b626-bfcb-410d-b367-7a9af82bb9b1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="36f16cd9-c9fe-4de4-bf68-5e0371885386" CvElementArea="913, 372, 221, 55" CvTextArea="915, 340, 136, 22" CvTextArgument="Company Name" CvType="InputBox" DesignTimeRectangle="904, 328, 255, 98" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' class='bubble-element Group' innertext='Company Name' parentclass='bubble-r-box' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='bubble-element Group' innertext='Company Name' parentclass='bubble-r-box' aaname='' /&gt;" Guid="4a3179fe-68f6-4950-8cb6-ac5d708193d6" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6610036c43dfa8b4a206d9a7c9e14511.png" xmlns="">0eOlappKQAEqtssqaCzdxFQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

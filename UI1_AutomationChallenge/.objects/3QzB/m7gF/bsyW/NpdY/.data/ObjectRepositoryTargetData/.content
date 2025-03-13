@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="vT6NZk7PKkW96eWiNtFI_A" Reference="enc63wlTHEipS7Zy5V0XBA/NpdY8ZjjP0aSe2ut0sRPSw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="theautomationchallenge.com" CVScreenId="6b522334-6c64-42b2-95c7-3ff202733585" CvElementArea="1174, 307, 222, 55" CvType="InputBox" DesignTimeRectangle="1177, 310, 217, 51" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzyAccuracy="0.95" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='bubble-element Group' /&gt;&lt;webctrl tag='DIV' class='bubble-element Text' innertext='Address' /&gt;&lt;webctrl tag='INPUT' type='input' class='bubble-element Input *' aaname='' /&gt;" Guid="59f113a7-85de-463a-8f19-d54fb6499b5e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1296a5f7d38e47b0e5147e6c964551d8.png" xmlns="">0KVhm_uD7n0WJWih5xe-wJA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

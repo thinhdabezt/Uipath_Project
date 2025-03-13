@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome The Automation Challenge",
+  "Type": "App",
+  "Id": "3QzBLYli10CPsSDeR2o6_w",
+  "Reference": "enc63wlTHEipS7Zy5V0XBA/3QzBLYli10CPsSDeR2o6_w",
+  "Created": "2025-03-11T05:50:55.1536577Z",
+  "Updated": "2025-03-11T05:50:55.1536577Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

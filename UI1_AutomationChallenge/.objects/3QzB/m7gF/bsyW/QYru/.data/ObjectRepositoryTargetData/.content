@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mwhHruhel0iAif5gaAJxkg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="theautomationchallenge.com" CVScreenId="2051dc96-703a-4179-bac2-b37a37cb3c80" CvElementArea="56, 857, 424, 59" CvTextArea="240, 879, 53, 16" CvTextArgument="Start" CvType="Button" DesignTimeRectangle="59, 860, 420, 56" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Start' tag='BUTTON' type='' class='bubble-element Button clickable-element' check:innerText='Start' /&gt;" Guid="7b6112b5-d433-4caa-9729-a524b6533dfe" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="2051dc96-703a-4179-bac2-b37a37cb3c80" CvElementArea="58, 805, 421, 36" CvTextArea="155, 814, 252, 22" CvTextArgument="Download Excel Spreadsheet" CvType="Button" DesignTimeRectangle="61, 808, 416, 30" FuzzySelectorArgument="&lt;webctrl aaname='  Download Excel Spreadsheet' class='content' tag='DIV' type='' check:innerText='Download Excel Spreadsheet' /&gt;" Guid="e08fb6db-5052-4015-ade2-fd95b57a15ad" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8a4d17c668d19fc38de3251553cdfdfd.png" xmlns="">0mF5XiCQTOkW7wW6dIiqKsg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

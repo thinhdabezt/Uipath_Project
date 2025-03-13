@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="j_yBTbjdpEGGoNMGktVNDA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="theautomationchallenge.com" CVScreenId="3cba94b6-a165-4825-b59b-4ac85e30b0b3" CvTextArea="915, 275, 136, 22" CvType="AnyWordGroup" DesignTimeRectangle="916, 270, 213, 28" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Company Name' class='content' tag='DIV' /&gt;" Guid="32ef4368-59b1-40a2-afd9-7871e61a381a" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9d0e41188fc35b8e829c886b722dd6b9.png" xmlns="">0UnxZDBh00UmeRFig4AE38Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

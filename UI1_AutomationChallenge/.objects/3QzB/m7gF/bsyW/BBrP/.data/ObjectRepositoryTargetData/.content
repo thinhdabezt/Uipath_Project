@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="B70as2Ol0EamBsITe2Vybw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="theautomationchallenge.com" CVScreenId="f4d2af6e-c6a5-413b-b71a-802993a95cb5" CvElementArea="913, 372, 221, 55" CvType="InputBox" DesignTimeRectangle="916, 375, 216, 51" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' class='bubble-element Input a1741685809066x3362' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' parentclass='bubble-r-box' type='input' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' class='bubble-element Input a1741685809066x3362' aaname='' parentclass='bubble-r-box' type='input' /&gt;" Guid="c8c8b501-b522-4355-80e7-3e03d894b512" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f4d2af6e-c6a5-413b-b71a-802993a95cb5" CvElementArea="913, 372, 221, 55" CvTextArea="915, 340, 136, 22" CvTextArgument="Company Name" CvType="InputBox" DesignTimeRectangle="904, 328, 255, 98" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' class='bubble-element Group' innertext='Company Name' parentclass='bubble-r-box' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='bubble-element Group' innertext='Company Name' parentclass='bubble-r-box' aaname='' /&gt;" Guid="fa96a0aa-d0d0-4170-91db-4089e004917a" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8052eb10b64344e5ed2fccdaa7e0f680.png" xmlns="">0OZsrib_6z0K2doQUBA8RiA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

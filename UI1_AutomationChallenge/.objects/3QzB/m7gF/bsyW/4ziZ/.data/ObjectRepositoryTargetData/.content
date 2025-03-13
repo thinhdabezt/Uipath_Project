@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="CSJmpDsCOU6ikcrEs5YUDQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="theautomationchallenge.com" DesignTimeRectangle="1170, 486, 238, 65" DesignTimeScaleFactor="1.25" Guid="2510ce93-50ce-43ef-8568-149b44976c8a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO4AAABBCAYAAADWpJgZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHlSURBVHhe7dixquJQGIXR+/7PaIpgUghiEfA2KTL8gsNwCs1xMszdsBZshDSx+XKiX9/f35uZZe2rvWBmP3/CNQuccM0CJ1yzwAnXLHDCNQuccM0C93G41+t1O5/P2zAM2+l0MrOdq2aqnWqo7WrvusO93+/bNE3bOI7b7XbbgD7rum7Lsjwaqpaqqbazd+sOt240z3P7XYBOFXAdftVU29m7dYVbR3s9JYBjVLzVVO9rc1e49V5eRzxwnGdbbW+v1hVu/aiuJwRwnGqq2mp7e7WucOsfMeB41Vbb26sJF34A4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UIg4UKgfxruMAyPT+BYz7b2rivc8/n8+ASOsyzL77b2rivc6/W6jePY3hf4C9VUtdX29mpd4damadoul0t7b+AD8zw/mmo7e7fucO/3++NG9ZSoI76uAfut67rdbrdHQ9VSNdV29m7d4T5XR3u9l9eP6vpHzMz2rZqpdnpfj//cx+Ga2f+bcM0CJ1yzwAnXLHDCNQuccM0C9wtF1iTYViZ02AAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ab7d220c-9230-42b7-ad5a-5b56b2549e7c" CvTextArea="1180, 459, 58, 18" CvTextArgument="Sector" CvType="Text" DesignTimeRectangle="1181, 454, 213, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Sector' class='content' tag='DIV' type='' check:innerText='Sector' /&gt;" Guid="c5f78e34-68c1-4fee-b29d-792db4f44817" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="2bc481b857331cf60b90538e920202b7.png" xmlns="">0pui5ALSU9EivldDs3rjWzQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

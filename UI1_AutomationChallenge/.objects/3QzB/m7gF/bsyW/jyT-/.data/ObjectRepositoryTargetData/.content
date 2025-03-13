@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="A3hOnrSrNEKcfthywEmbHg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="theautomationchallenge.com" DesignTimeRectangle="797, 409, 343, 95" DesignTimeScaleFactor="1.25" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl src='https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F2a496aa5dc98109eb9ee78cd3de8efee.cdn.bubble.io%2Ff1638989352803x143524659881877400%2FReCaptcha.PNG?w=384&amp;amp;h=106&amp;amp;auto=compress&amp;amp;fit=crop&amp;amp;dpr=1.25' tag='IMG' type='' class='' aaname='' /&gt;" Guid="1ca3d2d4-a879-4708-a08c-692feaa50145" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="749, 350, 440, 184" FuzzySelectorArgument="&lt;webctrl type='' class='bubble-element Popup' tag='DIV' aaname='' check:innerText='Get through this reCAPTCHA to continue&amp;#xA;presentation&amp;#xA;Privacy&amp;#xA;Terms' /&gt;" Guid="cb69a529-409c-4442-b93f-0b115cda51c2" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f70eae62af0081ba7de266f2e2811882.png" xmlns="">0KMER3VSqSEOaOGMptGp8KA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
