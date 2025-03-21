@@ -81,7 +81,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Open and innitialize all needed applications." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="732.0000000000001,631.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Open and innitialize all needed applications." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="742.4000000000001,631.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -103,7 +103,8 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="System1_NaviagteToWorkItem - Invoke Workflow File (System1\System1_NaviagteToWorkItem.xaml)" sap:VirtualizedContainerService.HintSize="416,196.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="System1\System1_NaviagteToWorkItem.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_URL">[in_Config("System1_WorkItems").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_System1_URL">[in_Config("System1_URL").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_System1_WorkItemURL">[in_Config("System1_WorkItems").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

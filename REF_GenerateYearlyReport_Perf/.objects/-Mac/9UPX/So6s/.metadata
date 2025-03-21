@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome ACME System 1 - Download Monthly Repor",
+  "Type": "Screen",
+  "Id": "So6sEdQMZkahaXOjw5g9Tg",
+  "Reference": "xejHkvR68ki-Q11lkVvL4A/So6sEdQMZkahaXOjw5g9Tg",
+  "ParentRef": "xejHkvR68ki-Q11lkVvL4A/9UPXd10r-k-hWk3aKhvYNQ",
+  "Created": "2025-03-12T06:36:19.3094651Z",
+  "Updated": "2025-03-12T06:36:19.3094651Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

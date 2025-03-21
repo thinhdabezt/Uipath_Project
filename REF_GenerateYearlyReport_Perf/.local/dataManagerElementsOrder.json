@@ -1,0 +1,228 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "bool_FolderExist&Sequence_34",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_GetClientDetail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_VendorInformation&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_WIDetailURL",
+        "out_TaxId"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_DownloadMonthlyReports.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_DownloadReportURL&Sequence_1",
+        "str_ReportFolderPath&Sequence_1",
+        "arr_Months&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_DownloadReportURL",
+        "in_ReportDirPath",
+        "in_Year",
+        "in_TaxId"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_MergeMonthlyReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_MonthlyReport&Sequence_2",
+        "str_ReportDirPath&Sequence_1",
+        "dt_Report&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TaxID",
+        "out_YearlyReportPath",
+        "in_ReportDirPath",
+        "in_Year"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_UploadYearlyReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_Confirmation&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_UploadReportURL",
+        "out_Confirmation",
+        "in_YearlyReportPath",
+        "in_TaxID",
+        "in_Year"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_UpdateWorkItem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_UpdateWorkItemURL",
+        "in_WorkItemDetailURL",
+        "in_Status",
+        "in_Comment"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_NavigateToDownloadReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_System1_URL",
+        "in_DownloadReportURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_NavigateToUploadReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_System1_URL",
+        "in_UploadReportURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_Close.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_System1_URL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_ConfirmationId&Sequence_1",
+        "str_YearlyReportPath&Sequence_1",
+        "str_TaxID&Sequence_1",
+        "bool_FolderExist&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_NaviagteToWorkItem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_System1_URL",
+        "in_System1_WorkItemURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "System1/System1_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strUsername&Sequence_1",
+        "strPassword&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_System1_URL",
+        "in_System1_Credential"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

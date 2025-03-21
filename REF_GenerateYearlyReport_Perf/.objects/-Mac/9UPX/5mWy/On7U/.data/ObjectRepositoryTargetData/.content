@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MzeVQN_UNkK49RuwbtNwqQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/work-items/105175572" CVScreenId="f1a74fb3-d226-4ab0-95d5-e1b156839052" CvElementArea="464, 178, 96, 61" CvTextArea="499, 202, 25, 15" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="472, 186, 81, 48" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="a2e77bb8-db8c-46f2-b7c0-f043819409ae" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f1a74fb3-d226-4ab0-95d5-e1b156839052" CvElementArea="464, 178, 96, 61" CvTextArea="499, 202, 25, 15" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="17, 186, 561, 73" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl idx='6' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl automationid='' role='pane' check:fulltext='OK' /&gt;" Guid="ad34ac62-96b7-4e78-80ad-7a37480d2618" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a6140c25f081b16180043dca58b2fd57.png" xmlns="">0cVJVjRQgy0eUE2iBM-FZOg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

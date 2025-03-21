@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="XE71x8z2PkCq7f4Dw_aOPw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/login" CVScreenId="1433f60f-760d-4908-9261-d95d473e831c" CvTextArea="246, 342, 108, 46" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="247, 338, 1425, 61" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='page-header' aaname='                                                                                                                                                                                     Login                                                         ' check:innerText='Login' /&gt;" Guid="2383a21d-8854-48b6-9c94-f739362ca0cc" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="1433f60f-760d-4908-9261-d95d473e831c" CvTextArea="321, 436, 61, 20" CvTextArgument="/ Login" CvType="Text" DesignTimeRectangle="317, 434, 65, 25" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl isleaf='1' tag='LI' type='' class='breadcrumb-item active' aaname='Login' check:innerText='Login' /&gt;" Guid="6fe8f6f4-fc84-41fd-a676-f7ce9f8b59df" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4f9de90a671f37fd9bb4f52cba0d0ca1.png" xmlns="">0VPaz0NDNa0WMdkfJI8uMYg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

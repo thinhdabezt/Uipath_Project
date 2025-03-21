@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="M4AzAIhm2kulyOsxxzCRRA" Reference="xejHkvR68ki-Q11lkVvL4A/86ePLZzLbUqe4XcQSoIrAg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/reports/download" CVScreenId="686c7b30-1859-424a-9c4c-f19becc95021" CvTextArea="235, 61, 77, 15" CvTextArgument="Downloads" CvType="Text" DesignTimeRectangle="190, 48, 389, 44" DesignTimeScaleFactor="1.25" ElementType="Toolbar" FullSelectorArgument="&lt;wnd aaname='Loading' cls='msctls_progress32' /&gt;&lt;wnd title='Address: Downloads' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Loading' cls='msctls_progress32' /&gt;&lt;wnd title='Address: Downloads' check:text='Address: Downloads' /&gt;" Guid="ca1f8f42-9550-47fb-bc94-5328bb87757c" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8a12bdf148aba982aca18258842a3f51.png" xmlns="">0RDvOvJUqNEC6V4DLZxw7XQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

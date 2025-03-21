@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TqYtNY6ENUaXdfI2ruJUlQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/reports/upload" CVScreenId="991db8fa-c3db-4db6-9e60-0bf3373a968f" CvElementArea="333, 710, 175, 46" CvTextArea="349, 724, 141, 16" CvTextArgument="Select Report File" CvType="Button" DesignTimeRectangle="334, 712, 172, 42" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='btn btn-default' /&gt;" Guid="c6624455-1648-4a04-a104-823b2e23c61f" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2198e01cf3dc014244beb2240bdbdf9e.png" xmlns="">0ttPSqJRwuUe5_Ds2Fvi67w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

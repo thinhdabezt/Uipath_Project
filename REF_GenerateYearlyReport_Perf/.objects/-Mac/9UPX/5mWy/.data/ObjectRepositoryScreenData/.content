@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="PgmxtBCvRUCutPL6cKlufw" Reference="xejHkvR68ki-Q11lkVvL4A/5mWyAMHZZEWgJg9azdal4w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="NmVZgbXkj0OGwwgTLApSyA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF2SURBVDhPY2CgNuDh45NMy8o70DNx+tfpcxf/A2EQGyQGkkNXjwKsbOwLJ06b+2vWgmX/p89d/Lelo+95fUvno5nzl/4DiYHkQGrQ9YEBSGLWgmX/ps5e9MfVw6uWiYmJGSSurqnlANKMhP9hGAJy2qTpc39Pnb3wj5i4hDpMPDQipqd74rRnaAaAXYLiHZD/QBIgm2FiikrKpugakTFID9yAnonTv4H8DHM2CKhraNk3tnVfBeFpsxd+RzcAFLBwA0AhDQowuAAaSMvKW4GsecqsBT9BeuAKQBxkBTPnL/3T1j3hrm9AcD3IVXz8/OLBYZEd8Ulpc0zMLEJBlqEYAPICuhNh2NLaLg6ukIGBAWQgyLsoXoAFIjYcm5AyE9kAUECDxFECERaNyBrjklJnO7q4ZWtoaTvB1IGiGJROMKIRBGAJCWaAsal5MEwO5GyQzSDNWBMSDFjZ2hfBkvKUWfN/N7X3PIUG2F+QGN6kDAMUZSZyAAD7ekYy7oS+LgAAAABJRU5ErkJggg==" Reference="xejHkvR68ki-Q11lkVvL4A/5mWyAMHZZEWgJg9azdal4w" Selector="&lt;html app='chrome.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Title="ACME System 1" Url="[str_UpdateWorkItemURL]" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="52b045b937629cb32bc4520e20dabc37.jpg" xmlns="">0BT_tiMDKVESiSX0WSv5hlw</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="https://acme-test.uipath.com/work-items/update/105175572" Name="str_UpdateWorkItemURL" />
+    </scg:List>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

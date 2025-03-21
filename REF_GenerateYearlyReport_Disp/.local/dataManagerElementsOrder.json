@@ -37,8 +37,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "strUsername&Sequence_1",
-        "strPassword&Sequence_1",
-        "DashboardLableExist&Sequence_1"
+        "strPassword&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_System1_URL",
@@ -51,7 +50,7 @@
       "Path": "System1/System1_Close.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "LoginLabelExist&Sequence_1"
+        "str_System1_URL&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -62,7 +61,8 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "in_URL"
+        "in_System1_WorkItemURL",
+        "in_System1_URL"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -81,7 +81,9 @@
       "Path": "Framework/CloseAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -115,6 +117,7 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_System1_WorkItems&Sequence_1",
         "str_WI_Status&Sequence_1",
         "str_WI_Type&Sequence_1",
         "dt_WorkItems&Sequence_5"
@@ -122,6 +125,41 @@
       "ArgumentsSectionElementsOrder": [
         "in_TransactionItem",
         "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
