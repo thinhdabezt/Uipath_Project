@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Billing Invoice Template - Adobe Acrobat Read",
+  "Type": "Screen",
+  "Id": "C3b5isBdY0-GLz5ZZatQ-g",
+  "Reference": "YA_lVdiYOEudA5ltjLqw7w/C3b5isBdY0-GLz5ZZatQ-g",
+  "ParentRef": "YA_lVdiYOEudA5ltjLqw7w/T51gVU5vEk2hOqf1WNIYlg",
+  "Created": "2025-03-31T06:52:00.3233814Z",
+  "Updated": "2025-03-31T06:52:00.3233814Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

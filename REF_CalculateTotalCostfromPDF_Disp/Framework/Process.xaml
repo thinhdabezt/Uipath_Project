@@ -1,0 +1,884 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>818.4,454.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="100">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Vision.OmniPage.Core</x:String>
+      <x:String>UiPath.OmniPage.Activities</x:String>
+      <x:String>System.Drawing.Imaging</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="80">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C98F8F8307F_createOC.EuABE22XoRE1C9kDK1MdHyH1</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.OmniPage.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="800.0000000000001,5192.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_InputFolder" />
+      <Variable x:TypeArguments="x:String" Name="str_InvoiceNumber" />
+      <Variable x:TypeArguments="x:String" Name="str_BillToName" />
+      <Variable x:TypeArguments="x:String" Name="str_Date" />
+      <Variable x:TypeArguments="x:String" Name="str_QuantityServiceFee" />
+      <Variable x:TypeArguments="x:String" Name="str_UnitPriceServiceFee" />
+      <Variable x:TypeArguments="x:String" Name="str_QuantityAdditionalServices" />
+      <Variable x:TypeArguments="x:String" Name="str_UnitAdditionalServices" />
+      <Variable x:TypeArguments="x:String" Name="str_FileName" />
+      <Variable x:TypeArguments="x:String" Name="str_ExtractedText" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_SuccessFolderExist" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_FailedFolderExist" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="[Log Message/Process Start]" sap:VirtualizedContainerService.HintSize="603.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process: Started&quot;]" />
+    <Assign DisplayName="[Assign/Input Folder]" sap:VirtualizedContainerService.HintSize="603.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str_InputFolder]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Path.GetFullPath(in_Config("dir_Input").ToString).ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEachFileX DisplayName="[For Each File in Folder/Input Folder]" Folder="[str_InputFolder]" sap:VirtualizedContainerService.HintSize="603.2,4640" sap2010:WorkflowViewState.IdRef="ForEachFileX_4" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+      <ui:ForEachFileX.Body>
+        <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="[Do/Get Invoice Data]" sap:VirtualizedContainerService.HintSize="569.6,4344.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="bool_IsSuccess" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="[Assign/Is Success]" sap:VirtualizedContainerService.HintSize="536,113.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[bool_IsSuccess]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">[Nothing]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="[Using Application/Adobe]" sap:VirtualizedContainerService.HintSize="536,3241.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Always" ScopeGuid="b4773c16-303c-4d05-9325-ec8e53295bc1" Version="V2" WindowResize="Maximize">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="502.4,2918.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="468.8,2856.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch.Try>
+                        <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="aa3d8a44-f1d9-4a9d-a135-df8291a8babc" DisplayName="[CV Screen Scope/Invoices]" sap:VirtualizedContainerService.HintSize="467.2,2237.6" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+                          <p:CVScope.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <Assign DisplayName="[Assign/File Name]" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[str_FileName]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[Path.GetFileName(CurrentFile.ToString).ToString]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyText (706,257,33,12)&quot; +&#xA;&quot;Anchor: Text 'INVOICE #' (692,225,64,13)&quot;]" DesignTimeCacheId="aa3d8a44-f1d9-4a9d-a135-df8291a8babc" DesignTimeScaleFactor="1.25" DisplayName="[CV Get Text/Invoice Number]" sap:VirtualizedContainerService.HintSize="433.6,253.6" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="96ceaaafbaed8eec9a90969fca471a9e" NumberOfScrolls="2" RefreshBefore="True" Result="[str_InvoiceNumber]" ScrollDirection="None" Version="V6">
+                                  <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="008f0344-be34-4a0d-838e-f6de15e38f84">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="692, 225, 64, 13" ElementType="Text" Text="INVOICE #" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="706, 257, 33, 12" ElementType="AnyText" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                </p:CvGetTextWithDescriptor>
+                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (169,413,105,13)&quot; +&#xA;&quot;Anchor: Text 'BILL TO' (185,386,51,12)&quot; +&#xA;&quot;Anchor: Text 'DESCRIPTION' (188,569,89,12)&quot;]" DesignTimeCacheId="465e9111-57f5-4f06-8219-75f57897d95d" DesignTimeScaleFactor="1.25" DisplayName="[CV Get Text/Bill To Name]" sap:VirtualizedContainerService.HintSize="433.6,253.6" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_3" InformativeScreenshot="946ae9417c0535ac2f1ce168aa669fed" NumberOfScrolls="2" RefreshBefore="True" Result="[str_BillToName]" ScrollDirection="None" Version="V6">
+                                  <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="ae02fd98-7703-426c-9867-8e269de57c32">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="185, 386, 51, 12" ElementType="Text" Text="BILL TO" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="188, 569, 89, 12" ElementType="Text" Text="DESCRIPTION" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="169, 413, 105, 13" ElementType="AnyWordGroup" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                </p:CvGetTextWithDescriptor>
+                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (866,256,72,13)&quot; +&#xA;&quot;Anchor: Text 'DATE' (885,225,36,12)&quot;]" DesignTimeCacheId="aa3d8a44-f1d9-4a9d-a135-df8291a8babc" DesignTimeScaleFactor="1.25" DisplayName="[CV Get Text/Date]" sap:VirtualizedContainerService.HintSize="433.6,253.6" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_2" InformativeScreenshot="be8623c8e84bc58ba621bc1287138d6c" NumberOfScrolls="2" RefreshBefore="True" Result="[str_Date]" ScrollDirection="None" Version="V6">
+                                  <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="8e5475c7-8d95-4564-97c9-3094562fbc7f">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="885, 225, 36, 12" ElementType="Text" Text="DATE" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="866, 256, 72, 13" ElementType="AnyWordGroup" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                </p:CvGetTextWithDescriptor>
+                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (544,560,9,12)&quot; +&#xA;&quot;Anchor: Text 'Service Fee' (205,560,78,13)&quot; +&#xA;&quot;Anchor: Text 'QTY (hours)' (496,528,75,14)&quot;]" DesignTimeCacheId="aa3d8a44-f1d9-4a9d-a135-df8291a8babc" DesignTimeScaleFactor="1.25" DisplayName="[CV Get Text/Quanity Service Fee]" sap:VirtualizedContainerService.HintSize="433.6,253.6" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_4" InformativeScreenshot="405c580a8ff949355b9c5db8056e18ba" NumberOfScrolls="2" RefreshBefore="True" Result="[str_QuantityServiceFee]" ScrollDirection="None" Version="V6">
+                                  <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="0b0dc4cf-3600-4702-aa20-72a21f476ae5">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="205, 560, 78, 13" ElementType="Text" Text="Service Fee" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="496, 528, 75, 14" ElementType="Text" Text="QTY (hours)" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="544, 560, 9, 12" ElementType="AnyWordGroup" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                </p:CvGetTextWithDescriptor>
+                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyText (670,560,45,13)&quot; +&#xA;&quot;Anchor: Text 'Service Fee' (205,560,78,13)&quot; +&#xA;&quot;Anchor: Text 'UNIT PRICE ($)' (620,528,94,14)&quot;]" DesignTimeCacheId="aa3d8a44-f1d9-4a9d-a135-df8291a8babc" DesignTimeScaleFactor="1.25" DisplayName="[CV Get Text/Unit Price Quanity Service]" sap:VirtualizedContainerService.HintSize="433.6,253.6" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_5" InformativeScreenshot="e7da16e76cbb2e6ae0fe8635ac609cc8" NumberOfScrolls="2" RefreshBefore="True" Result="[str_UnitPriceServiceFee]" ScrollDirection="None" Version="V6">
+                                  <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="b6d87fcc-9ce0-4788-be7d-8f11d6d896e4">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="205, 560, 78, 13" ElementType="Text" Text="Service Fee" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="620, 528, 94, 14" ElementType="Text" Text="UNIT PRICE ($)" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="670, 560, 45, 13" ElementType="AnyText" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                </p:CvGetTextWithDescriptor>
+                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyText (544,580,9,12)&quot; +&#xA;&quot;Anchor: Text 'Additional Services' (205,580,124,13)&quot; +&#xA;&quot;Anchor: Text 'QTY (hours)' (496,528,75,14)&quot;]" DesignTimeCacheId="aa3d8a44-f1d9-4a9d-a135-df8291a8babc" DesignTimeScaleFactor="1.25" DisplayName="[CV Get Text - Any Text/Quantity Additional Services]" sap:VirtualizedContainerService.HintSize="433.6,253.6" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_6" InformativeScreenshot="5ea804c0d860597ed00182db7e743d35" NumberOfScrolls="2" RefreshBefore="True" Result="[str_QuantityAdditionalServices]" ScrollDirection="None" Version="V6">
+                                  <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="51a6d494-4343-494e-979e-adec941355ca">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="205, 580, 124, 13" ElementType="Text" Text="Additional Services" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="496, 528, 75, 14" ElementType="Text" Text="QTY (hours)" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="544, 580, 9, 12" ElementType="AnyText" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                </p:CvGetTextWithDescriptor>
+                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyText (678,580,37,14)&quot; +&#xA;&quot;Anchor: Text 'Additional Services' (205,580,124,13)&quot; +&#xA;&quot;Anchor: Text 'UNIT PRICE ($)' (620,528,94,14)&quot;]" DesignTimeCacheId="aa3d8a44-f1d9-4a9d-a135-df8291a8babc" DesignTimeScaleFactor="1.25" DisplayName="[CV Get Text/Unit Additional Services]" sap:VirtualizedContainerService.HintSize="433.6,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_7" InformativeScreenshot="66356a603bac9f89aad6d6e25367b0e8" NumberOfScrolls="2" RefreshBefore="True" Result="[str_UnitAdditionalServices]" ScrollDirection="None" Version="V6">
+                                  <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="0e0f3001-2a82-4f90-947f-d4af9ee0e00b">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="205, 580, 124, 13" ElementType="Text" Text="Additional Services" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="620, 528, 94, 14" ElementType="Text" Text="UNIT PRICE ($)" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="678, 580, 37, 14" ElementType="AnyText" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                </p:CvGetTextWithDescriptor>
+                              </Sequence>
+                            </ActivityAction>
+                          </p:CVScope.Body>
+                          <p:CVScope.DesignTimeCache>
+                            <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                          </p:CVScope.DesignTimeCache>
+                          <p:CVScope.DesignTimeCacheContainer>
+                            <uc:CvCacheContainer>
+                              <uc:CvCacheContainer.Caches>
+                                <scg:List x:TypeArguments="uc:CVCache" Capacity="2">
+                                  <uc:CVCache DataSent="False" DisplayName="Screen CV Get Text - '' (Main)" Id="aa3d8a44-f1d9-4a9d-a135-df8291a8babc" InformativeScreenshot="539a4da8f1d16fd4d6ddca41c2cc21db" LogicalPosition="440, 103" OcrText="OFD. Fpt Software INVOICE 14th Floor, Robinsons Summit Center A 6783 Ayala Ave.,Makati Philippine fptph@fpt.com INVOICE # DATE 6592 2017/08/01 CUSTOMER ID TERMS 878 Net 30 Days BILL TO Marlee Vinden Kwilith 6 Quincy Court Verdun 949-281-1213 mvinden4m@google.com.a u DESCRIPTION QTY (hours) UNIT PRICE ($) AMOUNT ($) Service Fee 6 200,00 1 200,00 Additional Services 6 75,00 450,00 - - - - - -" Position="440, 103" ScaleFactor="1.25" ScreenshotGuid="fc821264-b11a-48ed-b7f5-bfe4326eb230" ServerVersion="24.10.5.0">
+                                    <uc:CVCache.CvAnchorRelations>
+                                      <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                                        <uc:AnchorRelationInfo IsTargetText="True" Target="46">
+                                          <uc:AnchorRelationInfo.Anchors>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>45</x:Int32>
+                                              <x:Int32>46</x:Int32>
+                                            </x:Array>
+                                          </uc:AnchorRelationInfo.Anchors>
+                                        </uc:AnchorRelationInfo>
+                                        <uc:AnchorRelationInfo IsTargetText="True" Target="44">
+                                          <uc:AnchorRelationInfo.Anchors>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>42</x:Int32>
+                                              <x:Int32>43</x:Int32>
+                                              <x:Int32>44</x:Int32>
+                                            </x:Array>
+                                          </uc:AnchorRelationInfo.Anchors>
+                                        </uc:AnchorRelationInfo>
+                                        <uc:AnchorRelationInfo IsTargetText="True" Target="36">
+                                          <uc:AnchorRelationInfo.Anchors>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>35</x:Int32>
+                                              <x:Int32>36</x:Int32>
+                                            </x:Array>
+                                          </uc:AnchorRelationInfo.Anchors>
+                                        </uc:AnchorRelationInfo>
+                                      </scg:List>
+                                    </uc:CVCache.CvAnchorRelations>
+                                    <uc:CVCache.CvTables>
+                                      <x:Array Type="uc:CvTableInfo">
+                                        <uc:CvTableInfo>
+                                          <uc:CvTableInfo.Columns>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>617</x:Int32>
+                                              <x:Int32>824</x:Int32>
+                                              <x:Int32>976</x:Int32>
+                                            </x:Array>
+                                          </uc:CvTableInfo.Columns>
+                                          <uc:CvTableInfo.Rows>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>217</x:Int32>
+                                              <x:Int32>248</x:Int32>
+                                              <x:Int32>278</x:Int32>
+                                              <x:Int32>309</x:Int32>
+                                              <x:Int32>340</x:Int32>
+                                            </x:Array>
+                                          </uc:CvTableInfo.Rows>
+                                        </uc:CvTableInfo>
+                                        <uc:CvTableInfo>
+                                          <uc:CvTableInfo.Columns>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>202</x:Int32>
+                                              <x:Int32>481</x:Int32>
+                                              <x:Int32>610</x:Int32>
+                                              <x:Int32>758</x:Int32>
+                                              <x:Int32>972</x:Int32>
+                                            </x:Array>
+                                          </uc:CvTableInfo.Columns>
+                                          <uc:CvTableInfo.Rows>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>521</x:Int32>
+                                              <x:Int32>553</x:Int32>
+                                              <x:Int32>574</x:Int32>
+                                              <x:Int32>596</x:Int32>
+                                              <x:Int32>618</x:Int32>
+                                              <x:Int32>632</x:Int32>
+                                              <x:Int32>653</x:Int32>
+                                              <x:Int32>672</x:Int32>
+                                              <x:Int32>701</x:Int32>
+                                              <x:Int32>730</x:Int32>
+                                            </x:Array>
+                                          </uc:CvTableInfo.Rows>
+                                        </uc:CvTableInfo>
+                                      </x:Array>
+                                    </uc:CVCache.CvTables>
+                                    <uc:CVCache.CvUiElements>
+                                      <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                                        <uc:CvElementInfo Category="Icon" Region="16, 190, 29, 29" />
+                                        <uc:CvElementInfo Category="Icon" Region="17, 111, 28, 28" />
+                                        <uc:CvElementInfo Category="Icon" Region="18, 153, 28, 25" />
+                                        <uc:CvElementInfo Category="Icon" Region="18, 72, 28, 28" />
+                                        <uc:CvElementInfo Category="Icon" Region="17, 232, 28, 27" />
+                                        <uc:CvElementInfo Category="ArrowButton" Region="36, 168, 12, 12" />
+                                        <uc:CvElementInfo Category="Icon" Region="13, 20, 36, 44" />
+                                        <uc:CvElementInfo Category="Button" Region="11, 172, 41, 92" />
+                                        <uc:CvElementInfo Category="ArrowButton" Region="36, 128, 10, 11" />
+                                        <uc:CvElementInfo Category="Button" Region="14, 25, 35, 36" />
+                                        <uc:CvElementInfo Category="Cell" Region="617, 217, 207, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="617, 248, 207, 29" />
+                                        <uc:CvElementInfo Category="Cell" Region="617, 279, 207, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="617, 309, 207, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="824, 217, 152, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="824, 248, 152, 29" />
+                                        <uc:CvElementInfo Category="Cell" Region="824, 279, 152, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="824, 309, 152, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="203, 521, 279, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="203, 553, 279, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="203, 575, 279, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="203, 596, 279, 23" />
+                                        <uc:CvElementInfo Category="Cell" Region="203, 619, 279, 13" />
+                                        <uc:CvElementInfo Category="Cell" Region="203, 632, 279, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="203, 653, 279, 19" />
+                                        <uc:CvElementInfo Category="Cell" Region="203, 672, 279, 28" />
+                                        <uc:CvElementInfo Category="Cell" Region="203, 701, 279, 28" />
+                                        <uc:CvElementInfo Category="Cell" Region="481, 521, 128, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="481, 553, 128, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="481, 575, 128, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="481, 596, 128, 23" />
+                                        <uc:CvElementInfo Category="Cell" Region="481, 619, 128, 13" />
+                                        <uc:CvElementInfo Category="Cell" Region="481, 632, 128, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="481, 653, 128, 19" />
+                                        <uc:CvElementInfo Category="Cell" Region="481, 672, 128, 28" />
+                                        <uc:CvElementInfo Category="Cell" Region="481, 701, 128, 28" />
+                                        <uc:CvElementInfo Category="Cell" Region="610, 521, 148, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="610, 553, 148, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="610, 575, 148, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="610, 596, 148, 23" />
+                                        <uc:CvElementInfo Category="Cell" Region="610, 619, 148, 13" />
+                                        <uc:CvElementInfo Category="Cell" Region="610, 632, 148, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="610, 653, 148, 19" />
+                                        <uc:CvElementInfo Category="Cell" Region="610, 672, 148, 28" />
+                                        <uc:CvElementInfo Category="Cell" Region="610, 701, 148, 28" />
+                                        <uc:CvElementInfo Category="Cell" Region="758, 521, 212, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="758, 553, 212, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="758, 575, 212, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="758, 596, 212, 23" />
+                                        <uc:CvElementInfo Category="Cell" Region="758, 619, 212, 13" />
+                                        <uc:CvElementInfo Category="Cell" Region="758, 632, 212, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="758, 653, 212, 19" />
+                                        <uc:CvElementInfo Category="Cell" Region="758, 672, 212, 28" />
+                                        <uc:CvElementInfo Category="Cell" Region="758, 701, 212, 28" />
+                                        <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="202, 107, 91, 47" />
+                                        <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="36, 48, 10, 11" />
+                                        <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="36, 89, 8, 10" />
+                                        <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="216, 358, 761, 21" />
+                                        <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="36, 250, 8, 8" />
+                                        <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="618, 219, 208, 32" />
+                                        <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="225, 104, 40, 50" />
+                                      </scg:List>
+                                    </uc:CVCache.CvUiElements>
+                                    <uc:CVCache.OcrTexts>
+                                      <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
+                                        <uc:OcrTextInfo Region="202, 106, 88, 45" Text="OFD." />
+                                        <uc:OcrTextInfo Region="296, 124, 26, 18" Text="Fpt" />
+                                        <uc:OcrTextInfo Region="324, 124, 74, 16" Text="Software" />
+                                        <uc:OcrTextInfo Region="809, 121, 162, 33" Text="INVOICE" />
+                                        <uc:OcrTextInfo Region="204, 166, 28, 12" Text="14th" />
+                                        <uc:OcrTextInfo Region="234, 165, 36, 14" Text="Floor," />
+                                        <uc:OcrTextInfo Region="274, 165, 68, 13" Text="Robinsons" />
+                                        <uc:OcrTextInfo Region="202, 184, 50, 12" Text="Summit" />
+                                        <uc:OcrTextInfo Region="256, 184, 45, 13" Text="Center" />
+                                        <uc:OcrTextInfo Region="24, 196, 10, 12" Text="A" />
+                                        <uc:OcrTextInfo Region="201, 204, 33, 13" Text="6783" />
+                                        <uc:OcrTextInfo Region="236, 204, 37, 16" Text="Ayala" />
+                                        <uc:OcrTextInfo Region="276, 204, 77, 13" Text="Ave.,Makati" />
+                                        <uc:OcrTextInfo Region="202, 228, 64, 16" Text="Philippine" />
+                                        <uc:OcrTextInfo Region="268, 228, 96, 16" Text="fptph@fpt.com" />
+                                        <uc:OcrTextInfo Region="692, 225, 54, 12" Text="INVOICE" />
+                                        <uc:OcrTextInfo Region="746, 226, 10, 12" Text="#" />
+                                        <uc:OcrTextInfo Region="885, 225, 36, 12" Text="DATE" />
+                                        <uc:OcrTextInfo Region="706, 257, 33, 12" Text="6592" />
+                                        <uc:OcrTextInfo Region="866, 256, 72, 13" Text="2017/08/01" />
+                                        <uc:OcrTextInfo Region="677, 286, 76, 12" Text="CUSTOMER" />
+                                        <uc:OcrTextInfo Region="754, 286, 14, 12" Text="ID" />
+                                        <uc:OcrTextInfo Region="880, 286, 48, 12" Text="TERMS" />
+                                        <uc:OcrTextInfo Region="710, 317, 25, 13" Text="878" />
+                                        <uc:OcrTextInfo Region="864, 318, 24, 12" Text="Net" />
+                                        <uc:OcrTextInfo Region="889, 318, 16, 12" Text="30" />
+                                        <uc:OcrTextInfo Region="909, 317, 33, 16" Text="Days" />
+                                        <uc:OcrTextInfo Region="217, 362, 29, 12" Text="BILL" />
+                                        <uc:OcrTextInfo Region="248, 362, 20, 12" Text="TO" />
+                                        <uc:OcrTextInfo Region="202, 389, 44, 13" Text="Marlee" />
+                                        <uc:OcrTextInfo Region="249, 389, 46, 13" Text="Vinden" />
+                                        <uc:OcrTextInfo Region="202, 409, 42, 12" Text="Kwilith" />
+                                        <uc:OcrTextInfo Region="201, 429, 9, 12" Text="6" />
+                                        <uc:OcrTextInfo Region="214, 428, 45, 16" Text="Quincy" />
+                                        <uc:OcrTextInfo Region="264, 429, 36, 12" Text="Court" />
+                                        <uc:OcrTextInfo Region="201, 448, 48, 13" Text="Verdun" />
+                                        <uc:OcrTextInfo Region="252, 448, 92, 12" Text="949-281-1213" />
+                                        <uc:OcrTextInfo Region="201, 466, 178, 16" Text="mvinden4m@google.com.a" />
+                                        <uc:OcrTextInfo Region="202, 486, 9, 10" Text="u" />
+                                        <uc:OcrTextInfo Region="220, 526, 90, 13" Text="DESCRIPTION" />
+                                        <uc:OcrTextInfo Region="496, 528, 28, 12" Text="QTY" />
+                                        <uc:OcrTextInfo Region="526, 528, 45, 14" Text="(hours)" />
+                                        <uc:OcrTextInfo Region="620, 528, 32, 12" Text="UNIT" />
+                                        <uc:OcrTextInfo Region="654, 528, 40, 12" Text="PRICE" />
+                                        <uc:OcrTextInfo Region="697, 528, 17, 14" Text="($)" />
+                                        <uc:OcrTextInfo Region="828, 528, 60, 12" Text="AMOUNT" />
+                                        <uc:OcrTextInfo Region="888, 528, 17, 14" Text="($)" />
+                                        <uc:OcrTextInfo Region="205, 560, 49, 13" Text="Service" />
+                                        <uc:OcrTextInfo Region="258, 560, 25, 12" Text="Fee" />
+                                        <uc:OcrTextInfo Region="544, 560, 9, 12" Text="6" />
+                                        <uc:OcrTextInfo Region="670, 560, 45, 13" Text="200,00" />
+                                        <uc:OcrTextInfo Region="854, 560, 6, 12" Text="1" />
+                                        <uc:OcrTextInfo Region="864, 560, 46, 13" Text="200,00" />
+                                        <uc:OcrTextInfo Region="205, 580, 65, 13" Text="Additional" />
+                                        <uc:OcrTextInfo Region="273, 580, 56, 12" Text="Services" />
+                                        <uc:OcrTextInfo Region="544, 580, 9, 12" Text="6" />
+                                        <uc:OcrTextInfo Region="678, 580, 37, 14" Text="75,00" />
+                                        <uc:OcrTextInfo Region="864, 580, 46, 14" Text="450,00" />
+                                        <uc:OcrTextInfo Region="888, 600, 6, 13" Text="-" />
+                                        <uc:OcrTextInfo Region="889, 620, 6, 12" Text="-" />
+                                        <uc:OcrTextInfo Region="889, 640, 6, 12" Text="-" />
+                                        <uc:OcrTextInfo Region="889, 660, 6, 12" Text="-" />
+                                        <uc:OcrTextInfo Region="888, 680, 6, 12" Text="-" />
+                                        <uc:OcrTextInfo Region="888, 700, 6, 12" Text="-" />
+                                      </scg:List>
+                                    </uc:CVCache.OcrTexts>
+                                  </uc:CVCache>
+                                  <uc:CVCache DataSent="False" DisplayName="Screen CV Get Text - ''" Id="465e9111-57f5-4f06-8219-75f57897d95d" InformativeScreenshot="f69bbdd9d879ae3050dd54af4d617e9d" LogicalPosition="440, 103" OcrText="OFD. Fpt Software INVOICE 14th Floor, Robinsons Summit Center 6783 Ayala Ave.,Makati Philippine INVOICE # DATE fptph@fpt.com 2204 2018/05/16 CUSTOMER ID TERMS 8 Net 30 Days BILL TO Laurella Rickard Pixonyx 05 Blue Bill Park Center Taiping 918-202-8366 lrickardrh@devhub.co m DESCRIPTION QTY (hours) UNIT PRICE ($) AMOUNT ($) Service Fee 3 200,00 600,00 Additional Services 4 75,00 300,00 - - - -" Position="440, 103" ScaleFactor="1.25" ServerVersion="24.10.5.0">
+                                    <uc:CVCache.CvAnchorRelations>
+                                      <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                                        <uc:AnchorRelationInfo IsTargetText="True" Target="47">
+                                          <uc:AnchorRelationInfo.Anchors>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>46</x:Int32>
+                                              <x:Int32>47</x:Int32>
+                                            </x:Array>
+                                          </uc:AnchorRelationInfo.Anchors>
+                                        </uc:AnchorRelationInfo>
+                                        <uc:AnchorRelationInfo IsTargetText="True" Target="22">
+                                          <uc:AnchorRelationInfo.Anchors>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>19</x:Int32>
+                                              <x:Int32>20</x:Int32>
+                                            </x:Array>
+                                          </uc:AnchorRelationInfo.Anchors>
+                                        </uc:AnchorRelationInfo>
+                                        <uc:AnchorRelationInfo IsTargetText="True" Target="45">
+                                          <uc:AnchorRelationInfo.Anchors>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>43</x:Int32>
+                                              <x:Int32>44</x:Int32>
+                                              <x:Int32>45</x:Int32>
+                                            </x:Array>
+                                          </uc:AnchorRelationInfo.Anchors>
+                                        </uc:AnchorRelationInfo>
+                                        <uc:AnchorRelationInfo IsTargetText="True" Target="55">
+                                          <uc:AnchorRelationInfo.Anchors>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>53</x:Int32>
+                                              <x:Int32>54</x:Int32>
+                                            </x:Array>
+                                          </uc:AnchorRelationInfo.Anchors>
+                                        </uc:AnchorRelationInfo>
+                                      </scg:List>
+                                    </uc:CVCache.CvAnchorRelations>
+                                    <uc:CVCache.CvTables>
+                                      <x:Array Type="uc:CvTableInfo">
+                                        <uc:CvTableInfo>
+                                          <uc:CvTableInfo.Columns>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>584</x:Int32>
+                                              <x:Int32>792</x:Int32>
+                                              <x:Int32>944</x:Int32>
+                                            </x:Array>
+                                          </uc:CvTableInfo.Columns>
+                                          <uc:CvTableInfo.Rows>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>218</x:Int32>
+                                              <x:Int32>249</x:Int32>
+                                              <x:Int32>278</x:Int32>
+                                              <x:Int32>309</x:Int32>
+                                              <x:Int32>340</x:Int32>
+                                            </x:Array>
+                                          </uc:CvTableInfo.Rows>
+                                        </uc:CvTableInfo>
+                                        <uc:CvTableInfo>
+                                          <uc:CvTableInfo.Columns>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>172</x:Int32>
+                                              <x:Int32>449</x:Int32>
+                                              <x:Int32>576</x:Int32>
+                                              <x:Int32>728</x:Int32>
+                                              <x:Int32>938</x:Int32>
+                                            </x:Array>
+                                          </uc:CvTableInfo.Columns>
+                                          <uc:CvTableInfo.Rows>
+                                            <x:Array Type="x:Int32">
+                                              <x:Int32>564</x:Int32>
+                                              <x:Int32>596</x:Int32>
+                                              <x:Int32>616</x:Int32>
+                                              <x:Int32>638</x:Int32>
+                                              <x:Int32>657</x:Int32>
+                                              <x:Int32>676</x:Int32>
+                                              <x:Int32>698</x:Int32>
+                                              <x:Int32>730</x:Int32>
+                                            </x:Array>
+                                          </uc:CvTableInfo.Rows>
+                                        </uc:CvTableInfo>
+                                      </x:Array>
+                                    </uc:CVCache.CvTables>
+                                    <uc:CVCache.CvUiElements>
+                                      <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                                        <uc:CvElementInfo Category="Cell" Region="584, 219, 207, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="584, 249, 207, 28" />
+                                        <uc:CvElementInfo Category="Cell" Region="584, 279, 207, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="584, 309, 207, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="791, 219, 152, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="791, 249, 152, 28" />
+                                        <uc:CvElementInfo Category="Cell" Region="791, 279, 152, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="791, 309, 152, 31" />
+                                        <uc:CvElementInfo Category="Cell" Region="172, 564, 277, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="172, 596, 277, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="172, 616, 277, 21" />
+                                        <uc:CvElementInfo Category="Cell" Region="172, 639, 277, 19" />
+                                        <uc:CvElementInfo Category="Cell" Region="172, 657, 277, 17" />
+                                        <uc:CvElementInfo Category="Cell" Region="172, 676, 277, 23" />
+                                        <uc:CvElementInfo Category="Cell" Region="172, 699, 277, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="449, 564, 127, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="449, 596, 127, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="449, 616, 127, 21" />
+                                        <uc:CvElementInfo Category="Cell" Region="449, 639, 127, 19" />
+                                        <uc:CvElementInfo Category="Cell" Region="449, 657, 127, 17" />
+                                        <uc:CvElementInfo Category="Cell" Region="449, 676, 127, 23" />
+                                        <uc:CvElementInfo Category="Cell" Region="449, 699, 127, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="576, 564, 151, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="576, 596, 151, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="576, 616, 151, 21" />
+                                        <uc:CvElementInfo Category="Cell" Region="576, 639, 151, 19" />
+                                        <uc:CvElementInfo Category="Cell" Region="576, 657, 151, 17" />
+                                        <uc:CvElementInfo Category="Cell" Region="576, 676, 151, 23" />
+                                        <uc:CvElementInfo Category="Cell" Region="576, 699, 151, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="728, 564, 211, 32" />
+                                        <uc:CvElementInfo Category="Cell" Region="728, 596, 211, 20" />
+                                        <uc:CvElementInfo Category="Cell" Region="728, 616, 211, 21" />
+                                        <uc:CvElementInfo Category="Cell" Region="728, 639, 211, 19" />
+                                        <uc:CvElementInfo Category="Cell" Region="728, 657, 211, 17" />
+                                        <uc:CvElementInfo Category="Cell" Region="728, 676, 211, 23" />
+                                        <uc:CvElementInfo Category="Cell" Region="728, 699, 211, 32" />
+                                        <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="171, 106, 90, 47" />
+                                        <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="584, 280, 208, 31" />
+                                        <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="793, 280, 152, 32" />
+                                        <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="585, 312, 208, 31" />
+                                        <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="683, 316, 16, 18" />
+                                        <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="194, 105, 41, 48" />
+                                        <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="715, 226, 12, 14" />
+                                      </scg:List>
+                                    </uc:CVCache.CvUiElements>
+                                    <uc:CVCache.OcrTexts>
+                                      <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="62">
+                                        <uc:OcrTextInfo Region="170, 106, 88, 45" Text="OFD." />
+                                        <uc:OcrTextInfo Region="264, 124, 26, 18" Text="Fpt" />
+                                        <uc:OcrTextInfo Region="292, 124, 74, 16" Text="Software" />
+                                        <uc:OcrTextInfo Region="777, 121, 162, 33" Text="INVOICE" />
+                                        <uc:OcrTextInfo Region="172, 166, 28, 12" Text="14th" />
+                                        <uc:OcrTextInfo Region="202, 166, 36, 13" Text="Floor," />
+                                        <uc:OcrTextInfo Region="242, 165, 68, 13" Text="Robinsons" />
+                                        <uc:OcrTextInfo Region="170, 184, 50, 12" Text="Summit" />
+                                        <uc:OcrTextInfo Region="224, 184, 45, 13" Text="Center" />
+                                        <uc:OcrTextInfo Region="169, 204, 33, 13" Text="6783" />
+                                        <uc:OcrTextInfo Region="204, 204, 37, 16" Text="Ayala" />
+                                        <uc:OcrTextInfo Region="244, 204, 77, 13" Text="Ave.,Makati" />
+                                        <uc:OcrTextInfo Region="170, 228, 64, 16" Text="Philippine" />
+                                        <uc:OcrTextInfo Region="660, 225, 54, 12" Text="INVOICE" />
+                                        <uc:OcrTextInfo Region="714, 226, 10, 12" Text="#" />
+                                        <uc:OcrTextInfo Region="853, 225, 36, 12" Text="DATE" />
+                                        <uc:OcrTextInfo Region="169, 252, 96, 16" Text="fptph@fpt.com" />
+                                        <uc:OcrTextInfo Region="674, 257, 33, 12" Text="2204" />
+                                        <uc:OcrTextInfo Region="834, 257, 73, 12" Text="2018/05/16" />
+                                        <uc:OcrTextInfo Region="645, 286, 76, 12" Text="CUSTOMER" />
+                                        <uc:OcrTextInfo Region="722, 286, 14, 12" Text="ID" />
+                                        <uc:OcrTextInfo Region="848, 286, 48, 12" Text="TERMS" />
+                                        <uc:OcrTextInfo Region="686, 318, 9, 12" Text="8" />
+                                        <uc:OcrTextInfo Region="832, 318, 24, 12" Text="Net" />
+                                        <uc:OcrTextInfo Region="857, 318, 16, 12" Text="30" />
+                                        <uc:OcrTextInfo Region="877, 317, 33, 16" Text="Days" />
+                                        <uc:OcrTextInfo Region="185, 386, 29, 12" Text="BILL" />
+                                        <uc:OcrTextInfo Region="216, 386, 20, 12" Text="TO" />
+                                        <uc:OcrTextInfo Region="169, 413, 52, 13" Text="Laurella" />
+                                        <uc:OcrTextInfo Region="225, 413, 49, 13" Text="Rickard" />
+                                        <uc:OcrTextInfo Region="170, 432, 52, 16" Text="Pixonyx" />
+                                        <uc:OcrTextInfo Region="169, 452, 17, 13" Text="05" />
+                                        <uc:OcrTextInfo Region="190, 453, 29, 12" Text="Blue" />
+                                        <uc:OcrTextInfo Region="224, 452, 20, 13" Text="Bill" />
+                                        <uc:OcrTextInfo Region="246, 452, 30, 13" Text="Park" />
+                                        <uc:OcrTextInfo Region="170, 470, 45, 13" Text="Center" />
+                                        <uc:OcrTextInfo Region="169, 490, 46, 16" Text="Taiping" />
+                                        <uc:OcrTextInfo Region="220, 490, 92, 13" Text="918-202-8366" />
+                                        <uc:OcrTextInfo Region="169, 508, 144, 16" Text="lrickardrh@devhub.co" />
+                                        <uc:OcrTextInfo Region="170, 528, 13, 12" Text="m" />
+                                        <uc:OcrTextInfo Region="188, 569, 89, 12" Text="DESCRIPTION" />
+                                        <uc:OcrTextInfo Region="464, 569, 28, 12" Text="QTY" />
+                                        <uc:OcrTextInfo Region="494, 569, 45, 14" Text="(hours)" />
+                                        <uc:OcrTextInfo Region="588, 569, 32, 12" Text="UNIT" />
+                                        <uc:OcrTextInfo Region="622, 569, 40, 12" Text="PRICE" />
+                                        <uc:OcrTextInfo Region="665, 569, 17, 14" Text="($)" />
+                                        <uc:OcrTextInfo Region="796, 569, 58, 12" Text="AMOUNT" />
+                                        <uc:OcrTextInfo Region="856, 569, 17, 14" Text="($)" />
+                                        <uc:OcrTextInfo Region="173, 600, 50, 13" Text="Service" />
+                                        <uc:OcrTextInfo Region="226, 600, 25, 13" Text="Fee" />
+                                        <uc:OcrTextInfo Region="512, 601, 8, 12" Text="3" />
+                                        <uc:OcrTextInfo Region="638, 600, 45, 14" Text="200,00" />
+                                        <uc:OcrTextInfo Region="833, 600, 45, 14" Text="600,00" />
+                                        <uc:OcrTextInfo Region="173, 622, 65, 13" Text="Additional" />
+                                        <uc:OcrTextInfo Region="241, 622, 56, 13" Text="Services" />
+                                        <uc:OcrTextInfo Region="512, 622, 10, 12" Text="4" />
+                                        <uc:OcrTextInfo Region="646, 622, 37, 13" Text="75,00" />
+                                        <uc:OcrTextInfo Region="833, 622, 45, 13" Text="300,00" />
+                                        <uc:OcrTextInfo Region="857, 642, 6, 12" Text="-" />
+                                        <uc:OcrTextInfo Region="857, 662, 6, 12" Text="-" />
+                                        <uc:OcrTextInfo Region="857, 682, 5, 12" Text="-" />
+                                        <uc:OcrTextInfo Region="857, 702, 5, 12" Text="-" />
+                                      </scg:List>
+                                    </uc:CVCache.OcrTexts>
+                                  </uc:CVCache>
+                                </scg:List>
+                              </uc:CvCacheContainer.Caches>
+                            </uc:CvCacheContainer>
+                          </p:CVScope.DesignTimeCacheContainer>
+                          <p:CVScope.OCREngine>
+                            <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                              <ActivityFunc.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                              </ActivityFunc.Argument>
+                              <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                            </ActivityFunc>
+                          </p:CVScope.OCREngine>
+                          <p:CVScope.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a210a032-833e-4960-b3c0-944a2e82b386" InformativeScreenshot="e62b4ecd293959a60e25d6ac7e0683c7" Selector="&lt;wnd cls='AVL_AVView' title='AVSplitationPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVSplitterView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrollView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
+                          </p:CVScope.Target>
+                          <p:CVScope.UseLocalServer>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </p:CVScope.UseLocalServer>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </p:CVScope>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,340.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="[Log Message/Exception]" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[exception.ToString]" />
+                              <Assign DisplayName="[Assign/Is Success]" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[bool_IsSuccess]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                      <TryCatch.Finally>
+                        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="467.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </TryCatch.Finally>
+                    </TryCatch>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1038" Arguments="[CurrentFile.ToString]" FilePath="[in_Config(&quot;dir_Adobe&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUASURBVFhH5dh9TFVlHAfwg5ZY5sUIfKkop5XTtGXqUouo9I6w4K4FNducDk3ECzgBkVbMtUk4YQxkvExuS7EIDZbNbEQ5hbDVeBE1mHDXire4IIy355znebz3fm3nsPzjnHvRq+doW398/zh7nvM8nz33nOd3zyNcv35dAKCJ2+02LOq5JovgEehy+bmOlq7jJuEcNwnXuEmADhniJiHHVVoU4nY6tXN6iUegs/jQam4SHHx+IOjb4ZB2xkJK2Hb7idvspmuWMRbsL3KTYHMW5M5Vz+ktHoHcJPzI5zwIaU8CiL0dZGwMhJDbz/Cwm9TXcunj1Gts/iOcm4Tjzk8+vCWkNyBjKxeBXGjSTnYncTggpe8CD5zq5EHTTjn3pd8U6Q0Itm61dgKdIiV9ABbg5+QmodKZnz3b7XJpDPcUKEfakwg2+wH5BfzMZStaCC/IewYkPd2g2zeBBU+Xn8mTzvzsOWqHfsDhYYgnvgRN3Aqx5rS23VPGx0FaL0OKeRM8wE/ehnLVDv2A9nbQmAjQN0JB33pN2+4t4+MQjx8Df3quDCRqh25A8adqsI0WiF9XgIfMgnTujKaP13R3gb28XNnM1Q7dgOTns2DvRIAmbAV/bCakyq+0fSaJPJexwJ5uMMt6sMUhkKuP6OP+aTxQ3jb27QUPmga2ajHI0JCmfbLcHeCeRPDA+8A2hGnabhbjgfYrYOa1YAFTwJ4MhPTDaZ/qt7HAsTGIZTbwBcGgoctBN1rAzKtB6s6CXGkDuXwR5PdLIF2dXtHGAjv/ghS3CXzWFNCk7ZAy0sDnzQA1rwXd/C7otvdBYzdC2r4JYlUFyNUBzRjGAeXV+7YS7Kk5ygTyW8wiXlHANPJ1sIWzQeO3QKw4Bhb6AljYCo9vuDHASy2QtrwHFhIAHjwNUopVKV3KT9nvAPnzD9CsfWBLQsAWBIMF+YOFh0KU+xgKHLwKKT8bdNGjoC8+q9RRGrNh4nlT9/03Z8+A/PoLSN/f2jZdgSMjEEsKJmpuTiboS8+DPbcA4ncntX19iG5Asb8fNNkKajGDhq0AXfIExKM2Ba7u60t0AyqQ70+B7oqDlGwFkfe70VFtPx+jH1CODBq8CjI0CDLueV/zNfoCDcj/E1haWooDBw6grKwMHR0dqKqqUq4PHz6MxsZGdHZ2wmazISsrC3l5ebDb7ZoxDAWGh4cjNzcX6enpyMnJQWxsLJKTk1FUVIS4uDiUl5cjKipKwR05ckQBq8cwFGg2m1FbW4vq6mokJCQgOjoaxcXF6OvrQ1paGnbv3o3IyEh0dXVhdHQU4/JHkodxDAVmZmYiNTUV2dnZygqWlJRgYGAAGRkZsFqtCjAsLAwxMTHo6enRjGE4UEYVFhaivb0d8fHxKCgoQEtLC3bs2IH9+/crwPr6erS2tmruvyvAurq6G9dJSUnKSqWkpODgwYOoqamBxWJBb2+v5l51DAE2NDTA4XDcuG5ra8P58+fR1NSkoAYHB9Hc3IyRWyiDtwd8ddVExfAwoK6xd4CtWeYzcIg9Mw/iF5+D9PZ4/at+R5HH7HdA/OYEuPy5ahJG1I7JgFYe4HeNL50PujMWYmEexNIifVOcD2nvLtA1S8Efniqfcn2kdngFOksOTefB/p+yx00D8tIbmnkPOXjQ/TnOkkMBaodXoHxW52pumOG6eGGZq/G3lYampXmpq7lh5qTng//l/AOBiPgPb7Y6sQAAAABJRU5ErkJggg==" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="0224d6912924ce05989cb70eed449007.png" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Billing Invoice Template - Adobe Acrobat Reader (64-bit)' /&gt;" Title="Billing Invoice Template - Adobe Acrobat Reader (64-bit)" Version="V1" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+            <If Condition="[Not bool_IsSuccess]" DisplayName="[If/Success Get Data]" sap:VirtualizedContainerService.HintSize="536,881.6" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,500" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="[Add Queue Item/PDF_Invoice]" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="382.4,256.8" sap2010:WorkflowViewState.IdRef="AddQueueItem_2" Priority="Normal" QueueType="PDF_Invoices" Reference="[str_FileName]">
+                    <ui:AddQueueItem.ItemInformation>
+                      <InArgument x:TypeArguments="x:String" x:Key="FileName">[str_FileName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="InvoiceNumber">[str_InvoiceNumber]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="BillToName">[str_BillToName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Date">[str_Date]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="QuantityServiceFee">[str_QuantityServiceFee]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="UnitPriceServiceFee">[str_UnitPriceServiceFee]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="QuantityAdditionalServices">[str_QuantityAdditionalServices]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="UnitAdditionalServices">[str_UnitAdditionalServices]</InArgument>
+                    </ui:AddQueueItem.ItemInformation>
+                  </ui:AddQueueItem>
+                  <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Path.GetFullPath(in_Config(&quot;dir_Success&quot;).ToString)]" DisplayName="[Move File/Success Folder]" sap:VirtualizedContainerService.HintSize="382.4,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[CurrentFile.ToString]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,243.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Path.GetFullPath(in_Config(&quot;dir_Failed&quot;).ToString)]" DisplayName="[Move File/Failed Folder]" sap:VirtualizedContainerService.HintSize="382.4,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_4" Overwrite="True" Path="[CurrentFile.ToString]" />
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:Break DisplayName="[Break/For Each File Loop]" sap:VirtualizedContainerService.HintSize="536,48" sap2010:WorkflowViewState.IdRef="Break_2" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachFileX.Body>
+    </ui:ForEachFileX>
+    <ui:LogMessage DisplayName="[Log Message/Process Start]" sap:VirtualizedContainerService.HintSize="603.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Process: Started&quot;]" />
+  </Sequence>
+</Activity>

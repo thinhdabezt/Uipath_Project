@@ -1,0 +1,1166 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Gmail.Enums</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Coronavirus Data Alert Bot&#xA;This UiPath automation follows the Robotic Enterprise Framework (REFramework) to extract live COVID-19 data from a web dashboard, allows user input for a specific country, and optionally sends the data to an email address.&#xA;&#xA;Author: Shiba, Sif&#xA;Contact Information: khanhvhmse183169@fpt.edu.vn,  thinhtdse181531@fpt.edu.vn&#xA;&#xA;Applications Involved:&#xA;Coronavirus Statistics Website (Web-based COVID-19 data portal using Computer Vision extraction).&#xA;&#xA;UiPath Studio with REFramework (to manage the automation logic and exception handling).&#xA;&#xA;Email Provider (e.g., Gmail, Outlook via SMTP or UiPath Mail activities).&#xA;&#xA;Required External Setup:&#xA;Computer Vision API Key: Required if using UiPath CV activities; must be stored securely in config or Orchestrator Assets.&#xA;&#xA;Browser Compatibility: Ensure Google Chrome is installed and set as the default browser for automation.&#xA;&#xA;Email Configuration: SMTP/Outlook setup should be configured for sending COVID reports to user-provided email addresses.&#xA;&#xA;Internet Access: Required to load and extract real-time data from the COVID dashboard." DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="800.0000000000001,7261.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd2:DataTable" Name="dt_CovidDataTable" />
+      <Variable x:TypeArguments="x:String" Name="str_CountryName" />
+      <Variable x:TypeArguments="x:String" Name="str_TotalCases" />
+      <Variable x:TypeArguments="x:String" Name="str_TotalRecovered" />
+      <Variable x:TypeArguments="x:String" Name="str_TotalDeath" />
+      <Variable x:TypeArguments="x:String" Name="str_ConavirusURL" />
+      <Variable x:TypeArguments="x:String" Name="str_APIKey" />
+      <Variable x:TypeArguments="x:String" Name="str_CVLinkURL" />
+      <Variable x:TypeArguments="x:String" Name="str_Email" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dic_Config" />
+      <Variable x:TypeArguments="x:String" Name="sta_Button" />
+      <Variable x:TypeArguments="x:String" Name="sta_Exist" />
+      <Variable x:TypeArguments="s:String[]" Name="arr_Email" />
+      <Variable x:TypeArguments="x:String" Name="sta_EmailChoosen" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Logs a message to indicate the start of the process." DisplayName="Log Message Start" sap:VirtualizedContainerService.HintSize="734.4,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start coronavirus process&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <Assign sap2010:Annotation.AnnotationText="Initializes an empty dictionary to store configuration values." DisplayName="Assign Config Dic" sap:VirtualizedContainerService.HintSize="734.4,144.8" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dic_Config]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary(Of String, Object)]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Loads all settings from the Config.xlsx file into the dic_Config dictionary." DisplayName="InitAllSettings - Invoke Workflow File (Data\InitAllSettings.xaml)" sap:VirtualizedContainerService.HintSize="734.4,249.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Data\InitAllSettings.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings","Constants"}]</InArgument>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[dic_Config]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <Assign sap2010:Annotation.AnnotationText="Retrieves the base URL for accessing Coronavirus-related data or site." DisplayName="Assign Conavirus URL" sap:VirtualizedContainerService.HintSize="734.4,144.8" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str_ConavirusURL]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[dic_Config("Conavirus_URL").ToString()]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <Assign sap2010:Annotation.AnnotationText="Stores a specific API or data source URL for CV (Coronavirus Visual/API) processing." DisplayName="Assign CV URL" sap:VirtualizedContainerService.HintSize="734.4,157.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str_CVLinkURL]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[dic_Config("CV_LinkURL").ToString()]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <Assign sap2010:Annotation.AnnotationText="Retrieves the API key required to authenticate with the Coronavirus data API." DisplayName="Assign CV API Key" sap:VirtualizedContainerService.HintSize="734.4,157.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str_APIKey]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[dic_Config("CV_APIKey").ToString()]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Launches the browser and navigates to the specified Coronavirus tracking page." AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Conavirus Page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="734.4,116.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="3d9d2f7c-7898-4ba1-a4e7-fc920cbb8f6e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap2010:Annotation.AnnotationText="This part handles data extraction using Computer Vision (CV), useful when standard selectors are not reliable." DisplayName="Data Extract Process" sap:VirtualizedContainerService.HintSize="467.2,980" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" sap2010:Annotation.AnnotationText="Defines a visual area (screenshot-based) on the screen for CV activities to interact with." ApiKey="[str_APIKey]" CvMethod="ElementDetection, OCR" DesignTimeCacheId="41392e30-e7f8-4546-a202-8f2a4b105a05" DisplayName="CV Screen Scope Conavirus Page" sap:VirtualizedContainerService.HintSize="433.6,874.4" sap2010:WorkflowViewState.IdRef="CVScope_5" SendOnPremData="False" Server="[str_CVLinkURL]" Version="V6">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                    <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" sap2010:Annotation.AnnotationText="Ensures the table is visible before attempting to extract it." Descriptor="[&quot;Target: Text 'Country,' (260,633,60,16)&quot; +&#xA;&quot;Anchor: Text 'Other' (260,653,41,13)&quot;]" DesignTimeCacheId="41392e30-e7f8-4546-a202-8f2a4b105a05" DesignTimeScaleFactor="1.25" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="400,213.6" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="f91f3903384d4df6b3726d2683e186c7" NumberOfScrolls="5" ScrollDirection="Down" Version="V6">
+                      <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor Id="9c8a5a17-37b5-4b36-9f48-3a6262e8cad6">
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="260, 653, 41, 13" ElementType="Text" Text="Other" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="260, 633, 60, 16" ElementType="Text" Text="Country," />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p:CvElementExistsWithDescriptor>
+                    <p:CvExtractDataTableWithDescriptor InRegion="{x:Null}" ScrollOffset="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Extracts the structured table into a DataTable variable, which can be used for reporting, filtering, or further automation." DelayScreenshotAfterScroll="250" Descriptor="[&quot;Target: Table (224,620,773,194)&quot;]" DesignTimeCacheId="41392e30-e7f8-4546-a202-8f2a4b105a05" DesignTimeScaleFactor="1.25" DisplayName="CV Extract Table - Table" sap:VirtualizedContainerService.HintSize="400,274.4" sap2010:WorkflowViewState.IdRef="CvExtractDataTableWithDescriptor_2" IgnoreEmptyRows="False" InformativeScreenshot="5e5f5565eb4e80e44e75be7df687a4b3" MaxTableScrollHeightInPixels="30000" NumberOfScrolls="2" RefreshBefore="True" Result="[dt_CovidDataTable]" Scroll="True" ScrollDirection="Down" Version="V6">
+                      <p:CvExtractDataTableWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor Id="89bd920e-31cb-44cc-9c04-ddf2db1dfc11">
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="224, 620, 773, 194" ElementType="Table" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvExtractDataTableWithDescriptor.DesignTimeDescriptor>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p:CvExtractDataTableWithDescriptor>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+              </p:CVScope.DesignTimeCache>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DataSent="False" DisplayName="Screen CV Element Exists - 'Co (Main)" Id="41392e30-e7f8-4546-a202-8f2a4b105a05" InformativeScreenshot="7beebebab784bd379c1671462eecf3b9" LogicalPosition="0, 0" OcrText="v U COVID - Coronavirus Statistics X + ? _ X worldometers.info/coronavirus/ v select coursera-natural-la.d/highlighted, try changing the UI All Bookmarks framework (F4) or using the Image region selection (F3). &quot;UiPath Browser Automation 24.10&quot; started debugging this browser Cancel X Pause Selection type: Element as a new report is released. UI Framework Default On January 29, 2020, Worldometer started tracking the coronavirus, delivering the most accurate and timely global statistics to users and institutions around the world at a time when this was extremely challenging. We thank everyone who participated in this extraordinary collaborative effort. The day is reset after midnight GMT+0. The list of countries and their regional classification is based on the United Nations Geoscheme. Sources are provided under &quot;Latest News.&quot; Learn more about Worldometer's COVID-19 data Report coronavirus cases MAIN WEEKLY TRENDS Now Yesterday 2 Days Ago Columns Search: All Europe North America Asia South America Africa Oceania Country, Total Total Total Tot Cases/ Deaths/ # Other 1t Cases 1F Deaths 11 Recovered IT 1M pop 1T 1M pop 1T Population 1t World 704,753,890 7,010,681 675,619,811 90,413 899.4 1 USA 111,820,082 1,219,487 109,814,428 333,985 3,642 334,805,269 2 India 45,035,393 533,570 N/A 32,016 379 1,406,631,776" Position="0, 0" ScaleFactor="1.25" ScreenshotGuid="5c419763-5f45-4af7-b157-a7d14012bdf1" ServerVersion="24.10.5.0">
+                        <uc:CVCache.CvAnchorRelations>
+                          <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                            <uc:AnchorRelationInfo IsTargetText="False" Target="0">
+                              <uc:AnchorRelationInfo.Anchors>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>141</x:Int32>
+                                </x:Array>
+                              </uc:AnchorRelationInfo.Anchors>
+                            </uc:AnchorRelationInfo>
+                            <uc:AnchorRelationInfo IsTargetText="False" Target="34">
+                              <uc:AnchorRelationInfo.Anchors>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>140</x:Int32>
+                                </x:Array>
+                              </uc:AnchorRelationInfo.Anchors>
+                            </uc:AnchorRelationInfo>
+                          </scg:List>
+                        </uc:CVCache.CvAnchorRelations>
+                        <uc:CVCache.CvTables>
+                          <x:Array Type="uc:CvTableInfo">
+                            <uc:CvTableInfo>
+                              <uc:CvTableInfo.Columns>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>224</x:Int32>
+                                  <x:Int32>252</x:Int32>
+                                  <x:Int32>369</x:Int32>
+                                  <x:Int32>476</x:Int32>
+                                  <x:Int32>562</x:Int32>
+                                  <x:Int32>674</x:Int32>
+                                  <x:Int32>784</x:Int32>
+                                  <x:Int32>877</x:Int32>
+                                  <x:Int32>997</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Columns>
+                              <uc:CvTableInfo.Rows>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>620</x:Int32>
+                                  <x:Int32>678</x:Int32>
+                                  <x:Int32>717</x:Int32>
+                                  <x:Int32>756</x:Int32>
+                                  <x:Int32>796</x:Int32>
+                                  <x:Int32>814</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Rows>
+                            </uc:CvTableInfo>
+                          </x:Array>
+                        </uc:CVCache.CvTables>
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                            <uc:CvElementInfo Category="InputBox" Description="Inputbox" Region="832, 539, 207, 32" />
+                            <uc:CvElementInfo Category="Button" Description="Button" Region="34, 4, 239, 35" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="1412, 49, 24, 24" />
+                            <uc:CvElementInfo Category="Icon" Description="star icon" Region="1362, 50, 23, 23" />
+                            <uc:CvElementInfo Category="Icon" Description="uipath logo icon" Region="44, 8, 21, 21" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="1418, 89, 23, 19" />
+                            <uc:CvElementInfo Category="CloseButton" Description="CloseButton" Region="1502, 8, 20, 20" />
+                            <uc:CvElementInfo Category="Button" Description="Button" Region="223, 539, 63, 32" />
+                            <uc:CvElementInfo Category="Icon" Description="earth icon" Region="61, 89, 20, 19" />
+                            <uc:CvElementInfo Category="MaximizeButton" Description="MaximizeButton" Region="1456, 8, 20, 21" />
+                            <uc:CvElementInfo Category="MinimizeButton" Description="MinimizeButton" Region="1410, 7, 23, 20" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="282, 9, 19, 19" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="1504, 48, 19, 25" />
+                            <uc:CvElementInfo Category="InputBox" Description="Inputbox" Region="297, 43, 1100, 35" />
+                            <uc:CvElementInfo Category="CloseButton" Description="CloseButton" Region="1500, 136, 20, 19" />
+                            <uc:CvElementInfo Category="CloseButton" Description="CloseButton" Region="246, 10, 17, 17" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="1464, 48, 26, 25" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="13, 88, 23, 22" />
+                            <uc:CvElementInfo Category="Button" Description="Button" Region="223, 489, 70, 33" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="124, 49, 24, 24" />
+                            <uc:CvElementInfo Category="ArrowButton" Description="ArrowButton" Region="1517, 172, 18, 18" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="344, 648, 20, 23" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="450, 648, 20, 21" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="854, 648, 20, 23" />
+                            <uc:CvElementInfo Category="Button" Description="Button" Region="416, 126, 76, 40" />
+                            <uc:CvElementInfo Category="Icon" Description="pin icon" Region="972, 647, 23, 24" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="10, 49, 28, 26" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="760, 648, 20, 23" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="354, 9, 17, 21" />
+                            <uc:CvElementInfo Category="Button" Description="Button" Region="224, 591, 48, 32" />
+                            <uc:CvElementInfo Category="ArrowButton" Description="ArrowButton" Region="1517, 797, 18, 18" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="650, 649, 20, 21" />
+                            <uc:CvElementInfo Category="Icon" Description="Icon" Region="539, 649, 20, 21" />
+                            <uc:CvElementInfo Category="ArrowButton" Description="ArrowButton" Region="5, 4, 31, 32" />
+                            <uc:CvElementInfo Category="Button" Description="Button" Region="520, 536, 95, 36" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="224, 620, 27, 58" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="224, 679, 27, 39" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="224, 717, 27, 38" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="224, 756, 27, 40" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="224, 796, 27, 17" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="252, 620, 118, 58" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="252, 679, 118, 39" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="252, 717, 118, 38" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="252, 756, 118, 40" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="252, 796, 118, 17" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="370, 620, 105, 58" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="370, 679, 105, 39" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="370, 717, 105, 38" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="370, 756, 105, 40" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="370, 796, 105, 17" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="476, 620, 87, 58" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="476, 679, 87, 39" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="476, 717, 87, 38" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="476, 756, 87, 40" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="476, 796, 87, 17" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="563, 620, 112, 58" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="563, 679, 112, 39" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="563, 717, 112, 38" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="563, 756, 112, 40" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="563, 796, 112, 17" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="675, 620, 110, 58" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="675, 679, 110, 39" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="675, 717, 110, 38" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="675, 756, 110, 40" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="675, 796, 110, 17" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="784, 620, 92, 58" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="784, 679, 92, 39" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="784, 717, 92, 38" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="784, 756, 92, 40" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="784, 796, 92, 17" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="877, 620, 120, 58" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="877, 679, 120, 39" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="877, 717, 120, 38" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="877, 756, 120, 40" />
+                            <uc:CvElementInfo Category="Cell" Description="Cell" Region="877, 796, 120, 17" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="40, 88, 20, 20" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="45, 47, 38, 33" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="84, 52, 19, 19" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="270, 4, 116, 36" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="5, 4, 35, 33" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="46, 48, 23, 24" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="5, 3, 35, 34" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="351, 45, 28, 24" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="118, 45, 264, 35" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="95, 49, 23, 30" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="10, 49, 29, 27" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="60, 49, 57, 30" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="100, 52, 17, 18" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="384, 81, 1029, 37" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Confidence="Runtime" Region="9, 50, 28, 26" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="6, 177, 221, 64" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="274, 592, 81, 29" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="230, 652, 15, 16" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="124, 44, 260, 36" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="414, 125, 77, 41" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="CloseButton" Confidence="Runtime" Region="5, 4, 34, 33" />
+                            <uc:CvElementInfo Category="InputBox" Description="Inputbox" Region="272, 5, 114, 35" />
+                            <uc:CvElementInfo Category="InputBox" Description="Inputbox" Region="520, 536, 94, 36" />
+                            <uc:CvElementInfo Category="ArrowButton" Description="ArrowButton" Region="590, 546, 16, 19" />
+                            <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Confidence="Runtime" Region="353, 9, 19, 21" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="197">
+                            <uc:OcrTextInfo Region="13, 14, 12, 8" Text="v" />
+                            <uc:OcrTextInfo Region="49, 12, 9, 12" Text="U" />
+                            <uc:OcrTextInfo Region="69, 13, 37, 12" Text="COVID" />
+                            <uc:OcrTextInfo Region="108, 13, 5, 12" Text="-" />
+                            <uc:OcrTextInfo Region="116, 13, 65, 12" Text="Coronavirus" />
+                            <uc:OcrTextInfo Region="182, 13, 48, 12" Text="Statistics" />
+                            <uc:OcrTextInfo Region="249, 13, 10, 10" Text="X" />
+                            <uc:OcrTextInfo Region="285, 12, 12, 12" Text="+" />
+                            <uc:OcrTextInfo Region="358, 13, 8, 13" Text="?" />
+                            <uc:OcrTextInfo Region="1414, 8, 12, 12" Text="_" />
+                            <uc:OcrTextInfo Region="1505, 12, 12, 13" Text="X" />
+                            <uc:OcrTextInfo Region="154, 56, 196, 14" Text="worldometers.info/coronavirus/" />
+                            <uc:OcrTextInfo Region="1472, 56, 9, 10" Text="v" />
+                            <uc:OcrTextInfo Region="64, 66, 36, 12" Text="select" />
+                            <uc:OcrTextInfo Region="84, 92, 176, 14" Text="coursera-natural-la.d/highlighted," />
+                            <uc:OcrTextInfo Region="262, 93, 16, 12" Text="try" />
+                            <uc:OcrTextInfo Region="280, 92, 48, 13" Text="changing" />
+                            <uc:OcrTextInfo Region="328, 93, 18, 10" Text="the" />
+                            <uc:OcrTextInfo Region="348, 92, 13, 12" Text="UI" />
+                            <uc:OcrTextInfo Region="1444, 92, 16, 12" Text="All" />
+                            <uc:OcrTextInfo Region="1460, 92, 60, 12" Text="Bookmarks" />
+                            <uc:OcrTextInfo Region="16, 108, 53, 10" Text="framework" />
+                            <uc:OcrTextInfo Region="72, 108, 20, 12" Text="(F4)" />
+                            <uc:OcrTextInfo Region="93, 110, 12, 8" Text="or" />
+                            <uc:OcrTextInfo Region="108, 108, 28, 12" Text="using" />
+                            <uc:OcrTextInfo Region="136, 108, 20, 12" Text="the" />
+                            <uc:OcrTextInfo Region="157, 108, 32, 13" Text="Image" />
+                            <uc:OcrTextInfo Region="192, 109, 34, 12" Text="region" />
+                            <uc:OcrTextInfo Region="228, 108, 45, 12" Text="selection" />
+                            <uc:OcrTextInfo Region="276, 108, 21, 12" Text="(F3)." />
+                            <uc:OcrTextInfo Region="13, 140, 44, 12" Text="&quot;UiPath" />
+                            <uc:OcrTextInfo Region="60, 140, 48, 12" Text="Browser" />
+                            <uc:OcrTextInfo Region="109, 140, 69, 12" Text="Automation" />
+                            <uc:OcrTextInfo Region="181, 140, 36, 12" Text="24.10&quot;" />
+                            <uc:OcrTextInfo Region="220, 140, 40, 12" Text="started" />
+                            <uc:OcrTextInfo Region="264, 140, 64, 16" Text="debugging" />
+                            <uc:OcrTextInfo Region="330, 140, 21, 12" Text="this" />
+                            <uc:OcrTextInfo Region="354, 140, 48, 12" Text="browser" />
+                            <uc:OcrTextInfo Region="433, 140, 40, 12" Text="Cancel" />
+                            <uc:OcrTextInfo Region="1502, 140, 12, 12" Text="X" />
+                            <uc:OcrTextInfo Region="16, 152, 29, 8" Text="Pause" />
+                            <uc:OcrTextInfo Region="14, 180, 48, 12" Text="Selection" />
+                            <uc:OcrTextInfo Region="64, 181, 25, 12" Text="type:" />
+                            <uc:OcrTextInfo Region="93, 180, 42, 10" Text="Element" />
+                            <uc:OcrTextInfo Region="272, 184, 16, 9" Text="as" />
+                            <uc:OcrTextInfo Region="289, 184, 9, 9" Text="a" />
+                            <uc:OcrTextInfo Region="301, 184, 28, 10" Text="new" />
+                            <uc:OcrTextInfo Region="332, 181, 42, 16" Text="report" />
+                            <uc:OcrTextInfo Region="377, 181, 12, 12" Text="is" />
+                            <uc:OcrTextInfo Region="392, 181, 60, 12" Text="released." />
+                            <uc:OcrTextInfo Region="14, 212, 13, 12" Text="UI" />
+                            <uc:OcrTextInfo Region="28, 212, 60, 10" Text="Framework" />
+                            <uc:OcrTextInfo Region="92, 212, 38, 12" Text="Default" />
+                            <uc:OcrTextInfo Region="272, 212, 20, 12" Text="On" />
+                            <uc:OcrTextInfo Region="293, 212, 52, 16" Text="January" />
+                            <uc:OcrTextInfo Region="348, 212, 20, 13" Text="29," />
+                            <uc:OcrTextInfo Region="372, 212, 36, 13" Text="2020," />
+                            <uc:OcrTextInfo Region="410, 210, 89, 13" Text="Worldometer" />
+                            <uc:OcrTextInfo Region="502, 212, 48, 12" Text="started" />
+                            <uc:OcrTextInfo Region="552, 212, 54, 16" Text="tracking" />
+                            <uc:OcrTextInfo Region="609, 212, 24, 12" Text="the" />
+                            <uc:OcrTextInfo Region="634, 212, 82, 14" Text="coronavirus," />
+                            <uc:OcrTextInfo Region="720, 210, 68, 16" Text="delivering" />
+                            <uc:OcrTextInfo Region="788, 212, 24, 12" Text="the" />
+                            <uc:OcrTextInfo Region="814, 212, 37, 12" Text="most" />
+                            <uc:OcrTextInfo Region="853, 212, 61, 12" Text="accurate" />
+                            <uc:OcrTextInfo Region="272, 230, 28, 13" Text="and" />
+                            <uc:OcrTextInfo Region="301, 232, 46, 16" Text="timely" />
+                            <uc:OcrTextInfo Region="349, 230, 44, 16" Text="global" />
+                            <uc:OcrTextInfo Region="396, 232, 65, 12" Text="statistics" />
+                            <uc:OcrTextInfo Region="464, 232, 14, 12" Text="to" />
+                            <uc:OcrTextInfo Region="480, 233, 36, 10" Text="users" />
+                            <uc:OcrTextInfo Region="520, 230, 26, 13" Text="and" />
+                            <uc:OcrTextInfo Region="548, 232, 76, 12" Text="institutions" />
+                            <uc:OcrTextInfo Region="626, 230, 48, 13" Text="around" />
+                            <uc:OcrTextInfo Region="677, 232, 24, 12" Text="the" />
+                            <uc:OcrTextInfo Region="702, 230, 38, 13" Text="world" />
+                            <uc:OcrTextInfo Region="744, 232, 13, 12" Text="at" />
+                            <uc:OcrTextInfo Region="760, 233, 8, 10" Text="a" />
+                            <uc:OcrTextInfo Region="772, 232, 32, 12" Text="time" />
+                            <uc:OcrTextInfo Region="805, 232, 36, 12" Text="when" />
+                            <uc:OcrTextInfo Region="844, 232, 25, 12" Text="this" />
+                            <uc:OcrTextInfo Region="872, 233, 28, 10" Text="was" />
+                            <uc:OcrTextInfo Region="272, 252, 68, 16" Text="extremely" />
+                            <uc:OcrTextInfo Region="341, 252, 80, 16" Text="challenging." />
+                            <uc:OcrTextInfo Region="424, 252, 22, 12" Text="We" />
+                            <uc:OcrTextInfo Region="449, 252, 42, 12" Text="thank" />
+                            <uc:OcrTextInfo Region="496, 253, 65, 13" Text="everyone" />
+                            <uc:OcrTextInfo Region="562, 252, 29, 12" Text="who" />
+                            <uc:OcrTextInfo Region="596, 252, 80, 16" Text="participated" />
+                            <uc:OcrTextInfo Region="678, 252, 12, 12" Text="in" />
+                            <uc:OcrTextInfo Region="693, 252, 25, 12" Text="this" />
+                            <uc:OcrTextInfo Region="721, 250, 90, 16" Text="extraordinary" />
+                            <uc:OcrTextInfo Region="814, 250, 85, 13" Text="collaborative" />
+                            <uc:OcrTextInfo Region="272, 270, 41, 13" Text="effort." />
+                            <uc:OcrTextInfo Region="224, 320, 25, 12" Text="The" />
+                            <uc:OcrTextInfo Region="252, 320, 25, 16" Text="day" />
+                            <uc:OcrTextInfo Region="280, 320, 10, 12" Text="is" />
+                            <uc:OcrTextInfo Region="293, 321, 33, 12" Text="reset" />
+                            <uc:OcrTextInfo Region="329, 320, 33, 13" Text="after" />
+                            <uc:OcrTextInfo Region="364, 320, 61, 16" Text="midnight" />
+                            <uc:OcrTextInfo Region="428, 320, 50, 13" Text="GMT+0." />
+                            <uc:OcrTextInfo Region="482, 320, 25, 13" Text="The" />
+                            <uc:OcrTextInfo Region="510, 320, 20, 13" Text="list" />
+                            <uc:OcrTextInfo Region="532, 320, 16, 13" Text="of" />
+                            <uc:OcrTextInfo Region="550, 320, 61, 13" Text="countries" />
+                            <uc:OcrTextInfo Region="614, 320, 26, 13" Text="and" />
+                            <uc:OcrTextInfo Region="644, 320, 32, 13" Text="their" />
+                            <uc:OcrTextInfo Region="678, 320, 54, 16" Text="regional" />
+                            <uc:OcrTextInfo Region="736, 320, 84, 13" Text="classification" />
+                            <uc:OcrTextInfo Region="824, 320, 12, 12" Text="is" />
+                            <uc:OcrTextInfo Region="838, 320, 40, 12" Text="based" />
+                            <uc:OcrTextInfo Region="881, 324, 17, 9" Text="on" />
+                            <uc:OcrTextInfo Region="901, 320, 22, 13" Text="the" />
+                            <uc:OcrTextInfo Region="224, 344, 44, 12" Text="United" />
+                            <uc:OcrTextInfo Region="272, 344, 52, 13" Text="Nations" />
+                            <uc:OcrTextInfo Region="326, 344, 81, 13" Text="Geoscheme." />
+                            <uc:OcrTextInfo Region="410, 344, 53, 12" Text="Sources" />
+                            <uc:OcrTextInfo Region="466, 346, 21, 10" Text="are" />
+                            <uc:OcrTextInfo Region="492, 344, 58, 16" Text="provided" />
+                            <uc:OcrTextInfo Region="552, 344, 41, 13" Text="under" />
+                            <uc:OcrTextInfo Region="596, 344, 46, 13" Text="&quot;Latest" />
+                            <uc:OcrTextInfo Region="645, 344, 45, 13" Text="News.&quot;" />
+                            <uc:OcrTextInfo Region="694, 344, 38, 12" Text="Learn" />
+                            <uc:OcrTextInfo Region="736, 346, 36, 10" Text="more" />
+                            <uc:OcrTextInfo Region="774, 344, 40, 13" Text="about" />
+                            <uc:OcrTextInfo Region="816, 344, 98, 13" Text="Worldometer's" />
+                            <uc:OcrTextInfo Region="224, 368, 64, 12" Text="COVID-19" />
+                            <uc:OcrTextInfo Region="290, 368, 30, 12" Text="data" />
+                            <uc:OcrTextInfo Region="224, 444, 48, 16" Text="Report" />
+                            <uc:OcrTextInfo Region="276, 444, 84, 12" Text="coronavirus" />
+                            <uc:OcrTextInfo Region="361, 448, 38, 9" Text="cases" />
+                            <uc:OcrTextInfo Region="238, 498, 40, 13" Text="MAIN" />
+                            <uc:OcrTextInfo Region="306, 498, 58, 13" Text="WEEKLY" />
+                            <uc:OcrTextInfo Region="366, 498, 58, 13" Text="TRENDS" />
+                            <uc:OcrTextInfo Region="238, 548, 33, 13" Text="Now" />
+                            <uc:OcrTextInfo Region="298, 548, 72, 17" Text="Yesterday" />
+                            <uc:OcrTextInfo Region="397, 548, 10, 13" Text="2" />
+                            <uc:OcrTextInfo Region="412, 548, 34, 16" Text="Days" />
+                            <uc:OcrTextInfo Region="448, 548, 30, 16" Text="Ago" />
+                            <uc:OcrTextInfo Region="532, 548, 58, 13" Text="Columns" />
+                            <uc:OcrTextInfo Region="773, 548, 52, 13" Text="Search:" />
+                            <uc:OcrTextInfo Region="237, 600, 20, 14" Text="All" />
+                            <uc:OcrTextInfo Region="288, 600, 50, 16" Text="Europe" />
+                            <uc:OcrTextInfo Region="369, 600, 41, 12" Text="North" />
+                            <uc:OcrTextInfo Region="413, 600, 60, 13" Text="America" />
+                            <uc:OcrTextInfo Region="504, 600, 30, 14" Text="Asia" />
+                            <uc:OcrTextInfo Region="564, 600, 41, 14" Text="South" />
+                            <uc:OcrTextInfo Region="609, 600, 58, 13" Text="America" />
+                            <uc:OcrTextInfo Region="698, 600, 41, 13" Text="Africa" />
+                            <uc:OcrTextInfo Region="772, 600, 58, 13" Text="Oceania" />
+                            <uc:OcrTextInfo Region="260, 633, 60, 16" Text="Country," />
+                            <uc:OcrTextInfo Region="377, 633, 36, 12" Text="Total" />
+                            <uc:OcrTextInfo Region="484, 633, 36, 13" Text="Total" />
+                            <uc:OcrTextInfo Region="572, 633, 36, 13" Text="Total" />
+                            <uc:OcrTextInfo Region="682, 633, 24, 12" Text="Tot" />
+                            <uc:OcrTextInfo Region="708, 633, 48, 12" Text="Cases/" />
+                            <uc:OcrTextInfo Region="793, 633, 56, 12" Text="Deaths/" />
+                            <uc:OcrTextInfo Region="232, 653, 10, 12" Text="#" />
+                            <uc:OcrTextInfo Region="260, 653, 41, 13" Text="Other" />
+                            <uc:OcrTextInfo Region="346, 649, 16, 20" Text="1t" />
+                            <uc:OcrTextInfo Region="378, 653, 40, 12" Text="Cases" />
+                            <uc:OcrTextInfo Region="452, 650, 16, 17" Text="1F" />
+                            <uc:OcrTextInfo Region="484, 653, 49, 12" Text="Deaths" />
+                            <uc:OcrTextInfo Region="540, 650, 16, 18" Text="11" />
+                            <uc:OcrTextInfo Region="572, 653, 74, 13" Text="Recovered" />
+                            <uc:OcrTextInfo Region="652, 650, 17, 18" Text="IT" />
+                            <uc:OcrTextInfo Region="684, 653, 21, 13" Text="1M" />
+                            <uc:OcrTextInfo Region="708, 656, 26, 14" Text="pop" />
+                            <uc:OcrTextInfo Region="761, 650, 16, 18" Text="1T" />
+                            <uc:OcrTextInfo Region="793, 653, 21, 13" Text="1M" />
+                            <uc:OcrTextInfo Region="818, 656, 28, 14" Text="pop" />
+                            <uc:OcrTextInfo Region="856, 650, 16, 18" Text="1T" />
+                            <uc:OcrTextInfo Region="888, 653, 76, 16" Text="Population" />
+                            <uc:OcrTextInfo Region="974, 650, 16, 18" Text="1t" />
+                            <uc:OcrTextInfo Region="260, 692, 44, 14" Text="World" />
+                            <uc:OcrTextInfo Region="378, 692, 90, 16" Text="704,753,890" />
+                            <uc:OcrTextInfo Region="484, 692, 72, 16" Text="7,010,681" />
+                            <uc:OcrTextInfo Region="578, 692, 86, 16" Text="675,619,811" />
+                            <uc:OcrTextInfo Region="728, 692, 49, 16" Text="90,413" />
+                            <uc:OcrTextInfo Region="830, 692, 41, 14" Text="899.4" />
+                            <uc:OcrTextInfo Region="234, 732, 6, 12" Text="1" />
+                            <uc:OcrTextInfo Region="260, 732, 30, 13" Text="USA" />
+                            <uc:OcrTextInfo Region="378, 732, 90, 16" Text="111,820,082" />
+                            <uc:OcrTextInfo Region="484, 732, 72, 16" Text="1,219,487" />
+                            <uc:OcrTextInfo Region="578, 732, 89, 16" Text="109,814,428" />
+                            <uc:OcrTextInfo Region="718, 732, 60, 16" Text="333,985" />
+                            <uc:OcrTextInfo Region="830, 732, 41, 16" Text="3,642" />
+                            <uc:OcrTextInfo Region="900, 732, 92, 16" Text="334,805,269" />
+                            <uc:OcrTextInfo Region="233, 772, 8, 10" Text="2" />
+                            <uc:OcrTextInfo Region="260, 769, 40, 13" Text="India" />
+                            <uc:OcrTextInfo Region="386, 769, 81, 16" Text="45,035,393" />
+                            <uc:OcrTextInfo Region="496, 769, 60, 16" Text="533,570" />
+                            <uc:OcrTextInfo Region="637, 770, 30, 13" Text="N/A" />
+                            <uc:OcrTextInfo Region="728, 770, 50, 16" Text="32,016" />
+                            <uc:OcrTextInfo Region="844, 770, 28, 13" Text="379" />
+                            <uc:OcrTextInfo Region="888, 769, 104, 16" Text="1,406,631,776" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ApiKey="[str_APIKey]" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="400,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_4" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="aa8eaaa6-8730-498e-96e2-a1a7c0a8f19b" InformativeScreenshot="f42171bf167eecee73bf5940bc611eb1" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p:CVScope>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="jDNhAYWooEKuvK4eXhBHiw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAElEQVRYR+2Y2WtTQRTG+6B/nulYq1YtKrYorQUXEBRREERQQcQHFXwQM7WLUtvYVltLWw3dXSpit8medMueZmv2I2eSO96tRaWJLznwvdzz3XN+c2fCPTc1lJH9lJGzlJFZykiCMgJlVpwyMk0ZOU0Z2VdDGWmhjAR0jOWWnzLSiADzOslKaRYB0jqJSimNALILtWCUSeeGPfcKgHZWBzPex8Aiw7ASeQ/L4UHod10AIzNoCnZYDsNX/3PhXQr3g8l5XlMcG3dbG+FHsBtYZIhrIdQHb+zNwvsbwHIIXLFpkCJfyML42m0wrhzQFO2yHgPf9pLw5gppGFm9ofFikx57M0QzG8KbzsVg0HVZLEz2BBBgShh3A+hEgOSi8GYLKRjx/BlAqgpQBagCVAH+BmDs/wLk4OPaHU3RigEUCjn4tH5XU7SMAHXgjE0II0ABJjcfwgtdgAbwygCKL6ObOwA0qQCiMOC6pAVAWbdGhRFjxvtEA4BFX9tOQTjlFL4C5MG8fk/HawCTsw2S2ZDwJrIB6HO0aAHwwkKoVxgx8F1P2UG+asmHTcwb9/mq5bEY6it5lN5Z71MOKMVm8id/nUs+BcDo6i3I5JPCjI9rYuMB3x6JeMh9FYIpu/DIvVObj+ClpV54P3iuQyTtVvjmA+0irwBA4aTjiJoVN2BhV2yST0i2rTGIZ32KvDwy+QS4YzMl7zgksn5FHmHeOtt2BsAEjmHBlE1x404RTjvBm1xQX9YNXAj/VcmaawAkiHfuK3yvdguEHPZc4wfKE59T7LM6opl1fm6K50nZTwMgQfTYz8Cc7xmsJb7xx44rSGaD/Pf/PdABJkcr96Fe2U7ygXY1/hniGfRu8ZPv317mA+mA66IYQtXSBShC4AhtgE7LUeh1nONFTM5W6LIeLzWWF6wF44oBOixHuBe3EafkbusJUUddXw6QUl9USypSLKS/kn/xYm8E+KKTqJSmEKCp9KGoTpZbPspIAwLg53kDZcRMGUnqGPda+BfAOGWkHnv/AnlXfNotRxm9AAAAAElFTkSuQmCC" InformativeScreenshot="2cae9395507ceb0409ff947f22a99fb3.jpg" Reference="-Qh6xhaf0kax8F0jUyneAg/iWg_gBuF1Ey7b7RgqPhAJQ" Selector="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" Url="[str_ConavirusURL]" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This group handles the repeating logic of the process — either looping based on a condition, or serving as a main bot loop structure." Condition="[sta_Button = &quot;Yes&quot;]" DisplayName="Loop the conavirus process" sap:VirtualizedContainerService.HintSize="734.4,5788.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_9">
+      <ui:InterruptibleDoWhile.Body>
+        <Sequence DisplayName="Coronavirus alert bot process" sap:VirtualizedContainerService.HintSize="732.8,5584.8" sap2010:WorkflowViewState.IdRef="Sequence_42">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" sap2010:Annotation.AnnotationText="Notifies the user or logs a step in the bot before making a decision." AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[sta_Button]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="699.2,161.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Coronavirus Alert Bot Start: &quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MessageBox>
+          <If sap2010:Annotation.AnnotationText="Determines if the bot should enter an active monitoring loop." Condition="[sta_Button = &quot;Yes&quot;]" DisplayName="If Condition Checked" sap:VirtualizedContainerService.HintSize="699.2,5363.2" sap2010:WorkflowViewState.IdRef="If_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence sap2010:Annotation.AnnotationText="Starts a continuous loop (e.g., for monitoring updates on COVID-19 stats, sending alerts, refreshing data, etc.)" DisplayName="Then Continue Process" sap:VirtualizedContainerService.HintSize="697.6,5177.6" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This activity is part of a loop that continues while a certain condition is true." Condition="[str_CountryName = Nothing]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="664,5086.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_8">
+                  <ui:InterruptibleDoWhile.Body>
+                    <Sequence DisplayName="Continue Input Process" sap:VirtualizedContainerService.HintSize="662.4,4904" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Prompts the user to enter a country name" DisplayName="Input Dialog Country Name" sap:VirtualizedContainerService.HintSize="628.8,304.8" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Enter country name: " Title="Country">
+                        <ui:InputDialog.Result>
+                          <OutArgument x:TypeArguments="x:String">[str_CountryName]</OutArgument>
+                        </ui:InputDialog.Result>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InputDialog>
+                      <If sap2010:Annotation.AnnotationText="Checks if the user actually entered a country name." Condition="[Not str_CountryName = Nothing]" DisplayName="If - Check country name empty or not" sap:VirtualizedContainerService.HintSize="628.8,4539.2" sap2010:WorkflowViewState.IdRef="If_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If.Then>
+                          <Sequence DisplayName="Continue Process" sap:VirtualizedContainerService.HintSize="627.2,4178.4" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap2010:Annotation.AnnotationText="Create status exist" DisplayName="Assign Status Exist" sap:VirtualizedContainerService.HintSize="593.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_26">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[sta_Exist]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[Nothing]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterates through all rows of the data table that was previously extracted using CV Extract Table." DataTable="[dt_CovidDataTable]" DisplayName="For Each Row in Covid Data Table" sap:VirtualizedContainerService.HintSize="593.6,3401.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd2:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Continue Finding Data Process" sap:VirtualizedContainerService.HintSize="592,3159.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If Condition="[CurrentRow(1).ToString().ToLower().Trim() = str_CountryName.ToLower().Trim()]" DisplayName="If Condition (Matching the Country)" sap:VirtualizedContainerService.HintSize="558.4,3099.2" sap2010:WorkflowViewState.IdRef="If_12">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <If.Then>
+                                        <Sequence DisplayName="Continues Process" sap:VirtualizedContainerService.HintSize="556.8,2944.8" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap2010:Annotation.AnnotationText="Stores the matched country name or label for future reference" DisplayName="Assign Status Country Name Exist" sap:VirtualizedContainerService.HintSize="523.2,144.8" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[sta_Exist]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">Yes</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <Assign sap2010:Annotation.AnnotationText="Stores the total number of cases." DisplayName="Assign Total Case" sap:VirtualizedContainerService.HintSize="523.2,144.8" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[str_TotalCases]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[CurrentRow(2).ToString()]</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <Assign sap2010:Annotation.AnnotationText="Stores the number of deaths." DisplayName="Assign Death" sap:VirtualizedContainerService.HintSize="523.2,144.8" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[str_TotalDeath]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[CurrentRow(3).ToString()]</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <Assign sap2010:Annotation.AnnotationText="Stores recovered cases." DisplayName="Assign Recovered" sap:VirtualizedContainerService.HintSize="523.2,144.8" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[str_TotalRecovered]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[CurrentRow(4).ToString()]</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This loop continuously prompts or waits for confirmation to send the email until the appropriate condition is met." Condition="[sta_EmailChoosen = &quot;Yes&quot;]" DisplayName="Loop Input Email" sap:VirtualizedContainerService.HintSize="523.2,2305.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_11">
+                                            <ui:InterruptibleDoWhile.Body>
+                                              <Sequence DisplayName="Countinue Email Input" sap:VirtualizedContainerService.HintSize="521.6,2110.4" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:MessageBox Caption="{x:Null}" sap2010:Annotation.AnnotationText="cts as a visual cue to the user or developer that the bot is awaiting email action" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[sta_EmailChoosen]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="488,161.6" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Input email: &quot;]">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:MessageBox>
+                                                <If sap2010:Annotation.AnnotationText="Determines whether the user has opted to receive a COVID-19 data alert via email." Condition="[sta_EmailChoosen = &quot;Yes&quot;]" DisplayName="Checking Status Button" sap:VirtualizedContainerService.HintSize="488,1888.8" sap2010:WorkflowViewState.IdRef="If_15">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <If.Then>
+                                                    <Sequence DisplayName="Start Email Inputing" sap:VirtualizedContainerService.HintSize="486.4,1703.2" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Keeps looping if email is invalid (missing &quot;@&quot;)" Condition="[Not str_Email.Contains(&quot;@&quot;)]" DisplayName="Loop for Email Process" sap:VirtualizedContainerService.HintSize="452.8,1643.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_10">
+                                                        <ui:InterruptibleDoWhile.Body>
+                                                          <Sequence DisplayName="Input Email" sap:VirtualizedContainerService.HintSize="451.2,1460.8" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Collects the email address from the user to send COVID alert." DisplayName="Input Dialog Email" sap:VirtualizedContainerService.HintSize="417.6,317.6" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="Enter your email: " Title="Email">
+                                                              <ui:InputDialog.Result>
+                                                                <OutArgument x:TypeArguments="x:String">[str_Email]</OutArgument>
+                                                              </ui:InputDialog.Result>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                            </ui:InputDialog>
+                                                            <TryCatch sap2010:Annotation.AnnotationText="Catches any exception that occurs while attempting to send the email (e.g., connection issue, invalid format, authentication error)." DisplayName="Try Catch Email Error" sap:VirtualizedContainerService.HintSize="417.6,1083.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <TryCatch.Try>
+                                                                <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" sap2010:Annotation.AnnotationText="Create and sending email " AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[string.Format(dic_Config(&quot;html_format&quot;).ToString(), str_TotalCases, str_TotalDeath, str_TotalRecovered, str_CountryName)]" ConnectionId="ae2cb3a7-68c6-4496-bb3e-40f48ff033f2" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,421.6" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;COVID-19 Report for &quot; + str_CountryName]" To="[{str_Email}]" UseConnectionService="True">
+                                                                  <uga:SendEmailConnections.Attachments>
+                                                                    <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+                                                                  </uga:SendEmailConnections.Attachments>
+                                                                  <uga:SendEmailConnections.AttachmentsBackup>
+                                                                    <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                                                                      <usau:BackupSlot.BackupValues>
+                                                                        <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+                                                                      </usau:BackupSlot.BackupValues>
+                                                                    </usau:BackupSlot>
+                                                                  </uga:SendEmailConnections.AttachmentsBackup>
+                                                                  <uga:SendEmailConnections.InputTypeBackup>
+                                                                    <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                                                                      <usau:BackupSlot.BackupValues>
+                                                                        <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                                                                      </usau:BackupSlot.BackupValues>
+                                                                    </usau:BackupSlot>
+                                                                  </uga:SendEmailConnections.InputTypeBackup>
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </uga:SendEmailConnections>
+                                                              </TryCatch.Try>
+                                                              <TryCatch.Catches>
+                                                                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                                                  <ActivityAction x:TypeArguments="s:Exception">
+                                                                    <ActivityAction.Argument>
+                                                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                                    </ActivityAction.Argument>
+                                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,405.6" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Waring the error that found while input the email" AutoCloseAfter="00:00:00" DisplayName="Message Box Error" sap:VirtualizedContainerService.HintSize="382.4,148.8" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Exception Error: &quot; + exception.Message()]">
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                      </ui:MessageBox>
+                                                                      <ui:LogMessage sap2010:Annotation.AnnotationText="Waring the error that found while input the email" DisplayName="Log Message Error" sap:VirtualizedContainerService.HintSize="382.4,196.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;Exception Error: &quot; + exception.Message()]">
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                      </ui:LogMessage>
+                                                                    </Sequence>
+                                                                  </ActivityAction>
+                                                                </Catch>
+                                                              </TryCatch.Catches>
+                                                              <TryCatch.Finally>
+                                                                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </Sequence>
+                                                              </TryCatch.Finally>
+                                                            </TryCatch>
+                                                          </Sequence>
+                                                        </ui:InterruptibleDoWhile.Body>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </ui:InterruptibleDoWhile>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                  <If.Else>
+                                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486.4,24.8" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </Sequence>
+                                                  </If.Else>
+                                                </If>
+                                              </Sequence>
+                                            </ui:InterruptibleDoWhile.Body>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:InterruptibleDoWhile>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="556.8,24.8" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ForEachRow>
+                            <If sap2010:Annotation.AnnotationText="This segment ensures user feedback is provided when the entered country name does not match any record in the data table. It helps to loop the process and allow retry." Condition="[Not sta_Exist = &quot;Yes&quot;]" DisplayName="If Status Country" sap:VirtualizedContainerService.HintSize="593.6,572" sap2010:WorkflowViewState.IdRef="If_14">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence DisplayName="Then Reset And Warning" sap:VirtualizedContainerService.HintSize="467.2,357.6" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap2010:Annotation.AnnotationText="Resets the input to force the process to prompt again in the loop." sap:VirtualizedContainerService.HintSize="433.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[str_CountryName]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[Nothing]</InArgument>
+                                    </Assign.Value>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Assign>
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Notifies the user that the entered country is not found in the data table." AutoCloseAfter="00:02:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,152.8" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Country Name is not Exist! Try again&quot;]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:MessageBox>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,24.8" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence DisplayName="Else Return Error" sap:VirtualizedContainerService.HintSize="627.2,200" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Notifies the user they must enter a value to continue." AutoCloseAfter="00:02:00" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="593.6,140" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Country Name is Empty! Try again&quot;]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:MessageBox>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </ui:InterruptibleDoWhile.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InterruptibleDoWhile>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="697.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </ui:InterruptibleDoWhile.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InterruptibleDoWhile>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Logs a message to indicate the end of the process." DisplayName="Log Message End" sap:VirtualizedContainerService.HintSize="734.4,196.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;End coronavirus process&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>

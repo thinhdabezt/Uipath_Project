@@ -1,0 +1,156 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Input.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_FromEmail",
+        "out_EmailSubject",
+        "out_Limit",
+        "out_EmailBody",
+        "out_AutoReply",
+        "out_AutoReplyBody",
+        "out_DownloadAttachment",
+        "out_FolderPath",
+        "out_FolderName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "InputForm_Trigger/SelectFolder_Trigger.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "isformClose&Sequence_1",
+        "SelectedFolder&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "TriggerEventArgs"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "InputForm_Trigger/Submit_Trigger.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TriggerEventArgs"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "InputForm_Trigger/CloseForm_Trigger.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SomeValue&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "TriggerEventArgs"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": ".local/generated/Triggers.Generated.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "StopTriggersVariable&Generated_0",
+        "BreakTriggerScopeVariableName&Generated_5",
+        "BreakTriggerScopeVariableName&Generated_9",
+        "BreakTriggerScopeVariableName&Generated_13"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Final/Final_GetMailMessage_NoAutoReply.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "list_Email&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_FromEmail",
+        "in_Limit",
+        "in_EmailSubject",
+        "in_EmailBody",
+        "in_DownloadAttachment",
+        "in_FolderPath",
+        "in_FolderName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SystemException&StateMachine_1",
+        "str_FromEmail&StateMachine_1",
+        "str_EmailSubject&StateMachine_1",
+        "int_Limit&StateMachine_1",
+        "str_EmailBody&StateMachine_1",
+        "str_AutoReply&StateMachine_1",
+        "str_AutoReplyBody&StateMachine_1",
+        "str_DownloadAttachment&StateMachine_1",
+        "str_FolderPath&StateMachine_1",
+        "str_FolderName&StateMachine_1",
+        "str_Button&StateMachine_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Final/Final_CheckOutputFolder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_FolderExist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_FolderName",
+        "in_FolderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MainWorkFlow/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Final/Final_GetMailMessage_AutoReply.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "list_Email&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_AutoReplyBody",
+        "in_FromEmail",
+        "in_Limit",
+        "in_EmailSubject",
+        "in_EmailBody",
+        "in_FolderPath",
+        "in_FolderName",
+        "in_DownloadAttachment"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

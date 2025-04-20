@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="C0-I49OsK0KBM8YfZ7M6ig" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="129c941c-d078-4a5d-b4ab-47161b57a627" CvTextArea="1011, 656, 36, 15" CvTextArgument="75,00" CvType="Text" DesignTimeRectangle="1011, 656, 36, 15" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="3d932f44-dc23-4436-bf0e-ce869c475a1b" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Billing Invoice Template - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="129c941c-d078-4a5d-b4ab-47161b57a627" CvTextArea="567, 656, 117, 13" CvTextArgument="Additional Services" CvType="Text" DesignTimeRectangle="567, 656, 117, 13" ElementType="Text" Guid="6b5ebbee-9a66-4b51-90e3-1de61e5bf878" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b6b7e47bb66606f84eba4baf9578ca9e.png" xmlns="">0IrV-eBnUdk-muO2D87sBSw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

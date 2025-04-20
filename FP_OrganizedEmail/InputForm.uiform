@@ -1,0 +1,216 @@
+﻿{
+  "Metadata": {
+    "Id": "569f1514-178c-42f8-8708-c2d7d17afa3b",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "InputForm",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "tag": "h1",
+        "content": "<b>Organized Email</b>",
+        "key": "label",
+        "input": false,
+        "tableView": false,
+        "label": "Label",
+        "type": "label"
+      },
+      {
+        "label": "Email Information",
+        "key": "emailInformation",
+        "type": "container",
+        "input": true,
+        "tableView": false,
+        "components": [
+          {
+            "label": "Table",
+            "cellAlignment": "left",
+            "key": "table",
+            "type": "table",
+            "numRows": 1,
+            "numCols": 2,
+            "input": false,
+            "tableView": false,
+            "rows": [
+              [
+                {
+                  "components": [
+                    {
+                      "label": "Email",
+                      "placeholder": "Email address",
+                      "tooltip": "Please enter a valid email address to receive emails from.",
+                      "tableView": true,
+                      "validate": {
+                        "required": true
+                      },
+                      "key": "email",
+                      "type": "email",
+                      "input": true
+                    }
+                  ]
+                },
+                {
+                  "components": [
+                    {
+                      "label": "Maximum Emails",
+                      "placeholder": "Number of emails want to get. (Defaut: 30)",
+                      "tableView": false,
+                      "delimiter": false,
+                      "requireDecimal": false,
+                      "truncateMultipleSpaces": false,
+                      "key": "limitMail",
+                      "type": "number",
+                      "input": true
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "label": "Email Subject",
+            "placeholder": "Contain",
+            "tooltip": "(Optional) Enter content to filter emails. The system will search for emails that contain the provided content. Leave empty to search all emails.\r\n",
+            "tableView": true,
+            "key": "emailSubject",
+            "type": "textfield",
+            "input": true
+          },
+          {
+            "label": "Email Content",
+            "placeholder": "Contain",
+            "tooltip": "(Optional) Enter content to filter emails. The system will search for emails that contain the provided content. Leave empty to search all emails.",
+            "tableView": true,
+            "key": "emailContent1",
+            "type": "textarea",
+            "input": true
+          }
+        ]
+      },
+      {
+        "label": "Donwload Attachment",
+        "optionsLabelPosition": "right",
+        "tooltip": "Select 'Yes' to download any attachments that come with the email. \r\nSelect 'No' if you do not wish to download any attachments.\r\n",
+        "inline": true,
+        "tableView": false,
+        "values": [
+          {
+            "label": "Yes",
+            "value": "True",
+            "shortcut": ""
+          },
+          {
+            "label": "No",
+            "value": "False",
+            "shortcut": ""
+          }
+        ],
+        "validate": {
+          "required": true
+        },
+        "key": "donwloadAttachment",
+        "type": "radio",
+        "input": true
+      },
+      {
+        "label": "Auto Reply",
+        "optionsLabelPosition": "right",
+        "tooltip": "If enabled, this option will send an automatic reply to the sender of the email, notifying them of the receipt of their email.\r\n",
+        "inline": true,
+        "tableView": false,
+        "values": [
+          {
+            "label": "Yes",
+            "value": "True",
+            "shortcut": ""
+          },
+          {
+            "label": "No",
+            "value": "False",
+            "shortcut": ""
+          }
+        ],
+        "validate": {
+          "required": true
+        },
+        "key": "autoReply",
+        "type": "radio",
+        "input": true
+      },
+      {
+        "label": "Table",
+        "cellAlignment": "left",
+        "key": "table1",
+        "type": "table",
+        "numRows": 1,
+        "numCols": 1,
+        "input": false,
+        "tableView": false,
+        "rows": [
+          [
+            {
+              "components": [
+                {
+                  "label": "Reply Content",
+                  "placeholder": "Content",
+                  "hidden": true,
+                  "tableView": true,
+                  "validate": {
+                    "required": true
+                  },
+                  "key": "replyContent",
+                  "conditional": {
+                    "show": true,
+                    "when": "autoReply",
+                    "eq": "True"
+                  },
+                  "type": "textarea",
+                  "input": true
+                }
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "label": "Destination Folder",
+        "placeholder": "Folder Path",
+        "tooltip": "Select a destination folder where emails will be stored.",
+        "tableView": true,
+        "validate": {
+          "required": true
+        },
+        "key": "folderPatch",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Folder Name",
+        "placeholder": "Default: Subject Name",
+        "tooltip": "Enter the name of the folder where the emails will be stored. You can use the default name or specify a custom name.\r\n",
+        "tableView": true,
+        "key": "folderName",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Submit",
+        "theme": "success",
+        "size": "sm",
+        "block": true,
+        "disableOnInvalid": true,
+        "tableView": false,
+        "key": "submit",
+        "type": "button",
+        "input": true,
+        "saveOnEnter": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="jDNhAYWooEKuvK4eXhBHiw" Reference="-Qh6xhaf0kax8F0jUyneAg/iWg_gBuF1Ey7b7RgqPhAJQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="oXM4Vg7up0i0CcX3Ekjhqg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAElEQVRYR+2Y2WtTQRTG+6B/nulYq1YtKrYorQUXEBRREERQQcQHFXwQM7WLUtvYVltLWw3dXSpit8medMueZmv2I2eSO96tRaWJLznwvdzz3XN+c2fCPTc1lJH9lJGzlJFZykiCMgJlVpwyMk0ZOU0Z2VdDGWmhjAR0jOWWnzLSiADzOslKaRYB0jqJSimNALILtWCUSeeGPfcKgHZWBzPex8Aiw7ASeQ/L4UHod10AIzNoCnZYDsNX/3PhXQr3g8l5XlMcG3dbG+FHsBtYZIhrIdQHb+zNwvsbwHIIXLFpkCJfyML42m0wrhzQFO2yHgPf9pLw5gppGFm9ofFikx57M0QzG8KbzsVg0HVZLEz2BBBgShh3A+hEgOSi8GYLKRjx/BlAqgpQBagCVAH+BmDs/wLk4OPaHU3RigEUCjn4tH5XU7SMAHXgjE0II0ABJjcfwgtdgAbwygCKL6ObOwA0qQCiMOC6pAVAWbdGhRFjxvtEA4BFX9tOQTjlFL4C5MG8fk/HawCTsw2S2ZDwJrIB6HO0aAHwwkKoVxgx8F1P2UG+asmHTcwb9/mq5bEY6it5lN5Z71MOKMVm8id/nUs+BcDo6i3I5JPCjI9rYuMB3x6JeMh9FYIpu/DIvVObj+ClpV54P3iuQyTtVvjmA+0irwBA4aTjiJoVN2BhV2yST0i2rTGIZ32KvDwy+QS4YzMl7zgksn5FHmHeOtt2BsAEjmHBlE1x404RTjvBm1xQX9YNXAj/VcmaawAkiHfuK3yvdguEHPZc4wfKE59T7LM6opl1fm6K50nZTwMgQfTYz8Cc7xmsJb7xx44rSGaD/Pf/PdABJkcr96Fe2U7ygXY1/hniGfRu8ZPv317mA+mA66IYQtXSBShC4AhtgE7LUeh1nONFTM5W6LIeLzWWF6wF44oBOixHuBe3EafkbusJUUddXw6QUl9USypSLKS/kn/xYm8E+KKTqJSmEKCp9KGoTpZbPspIAwLg53kDZcRMGUnqGPda+BfAOGWkHnv/AnlXfNotRxm9AAAAAElFTkSuQmCC" Reference="-Qh6xhaf0kax8F0jUyneAg/iWg_gBuF1Ey7b7RgqPhAJQ" Selector="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" Url="[str_ConavirusURL]" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="2cae9395507ceb0409ff947f22a99fb3.jpg" xmlns="">0mb-Qykc530qY_EvjQQUMtg</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="str_ConavirusURL" />
+    </scg:List>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

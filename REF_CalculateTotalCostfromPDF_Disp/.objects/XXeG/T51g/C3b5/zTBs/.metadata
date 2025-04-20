@@ -1,0 +1,14 @@
+﻿{
+  "Name": "QTY (hours)",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "zTBsMxU0TkatzEuXAtr-Gg",
+  "Reference": "YA_lVdiYOEudA5ltjLqw7w/zTBsMxU0TkatzEuXAtr-Gg",
+  "ParentRef": "YA_lVdiYOEudA5ltjLqw7w/C3b5isBdY0-GLz5ZZatQ-g",
+  "Created": "2025-03-31T06:59:22.5340936Z",
+  "Updated": "2025-03-31T06:59:22.5340936Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

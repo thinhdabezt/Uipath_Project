@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome COVID - Coronavirus Statistics - Worldometer",
+  "Type": "App",
+  "Id": "lDZesWxaPUiHRsJf3DExJA",
+  "Reference": "-Qh6xhaf0kax8F0jUyneAg/lDZesWxaPUiHRsJf3DExJA",
+  "Created": "2025-03-25T05:22:44.230724Z",
+  "Updated": "2025-03-25T05:22:44.230724Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_CovidDataTable&Sequence_1",
+        "str_CountryName&Sequence_1",
+        "str_TotalCases&Sequence_1",
+        "str_TotalRecovered&Sequence_1",
+        "str_TotalDeath&Sequence_1",
+        "str_ConavirusURL&Sequence_1",
+        "str_APIKey&Sequence_1",
+        "str_CVLinkURL&Sequence_1",
+        "str_Email&Sequence_1",
+        "dic_Config&Sequence_1",
+        "sta_Button&Sequence_1",
+        "sta_Exist&Sequence_1",
+        "arr_Email&Sequence_1",
+        "sta_EmailChoosen&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Data/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
